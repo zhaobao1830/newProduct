@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="description" content="overview & stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册页面</title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/register.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="register_top">
+      <img src="../images/registerLogo.png">
+      <span>欢迎注册</span>
+      <p>我已经注册，现在就<a>登录</a></p>
+    </div>
+    <form action="register/saveUserRegis.do" name="userForm" id="userForm" method="post">
+    <div class="accountInformation">
+        <p>账号信息</p>
+        <div>
+            <label><font size="3" color="red">*</font>登录用户名:</label>
+            <input type="text" class="username" id="username" name="username" value="">
+            <span class="usernameSpanY show"><img src="../images/registerY.png">6-20个字符，包含字数、数字或符号</span>
+            <span class="usernameSpanN hide"><img src="../images/registerN.png">请输入登录用户名</span>
+        </div>
+        <div>
+            <label><font size="3" color="red">*</font>登录密码:</label>
+            <input type="password" class="password" id="password" name="password" value="">
+            <span class="passwordSpanN hide"><img src="../images/registerN.png">请输入登录密码</span>
+        </div>
+        <div>
+            <label><font size="3" color="red">*</font>确认密码:</label>
+            <input type="password" class="repassword" id="repassword" name="repassword" value="">
+            <span class="repasswordSpanY hide"><img src="../images/registerY.png">请输入确认密码</span>
+            <span class="repasswordSpanN hide"><img src="../images/registerN.png">俩次密码不一致</span>
+        </div>
+    </div>
+    <div class="contactsInformation">
+        <p>联系人信息</p>
+        <div>
+            <label><font size="3" color="red">*</font>用户名:</label>
+            <input type="text" class="NAME" id="NAME" name="NAME" value="">
+            <span class="NAMESpanN hide"><img src="../images/registerN.png">请输入用户名</span>
+        </div>
+        <div>
+            <label><font size="3" color="red">*</font>手机:</label>
+            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="">
+            <span class="PHONESpanN hide"><img src="../images/registerN.png">请输入手机</span>
+        </div>
+        <div>
+            <label><font size="3" color="red">*</font>邮箱:</label>
+            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="">
+            <span class="EMAILSpanN hide"><img src="../images/registerN.png">请输入邮箱</span>
+        </div>
+        <div>
+            <label>用户角色:</label>
+            <select>
+                <option value="">---请选择---</option>
+                <option value="">供应商</option>
+                <option value="">生产厂家</option>
+            </select>
+        </div>
+        <div>
+            <label>性别:</label>
+            <select>
+                <option value="">---请选择---</option>
+                <option value="">男</option>
+                <option value="">女</option>
+            </select>
+        </div>
+        <div>
+            <label>验证码:</label>
+            <input type="text" id="register_codes" value="">
+            <span  onclick="createCode()" id="checkCode"></span>
+        </div>
+        <div id="registerCheck">
+            <label id="check_register" for="register_check">
+                <input type="checkbox" id="register_check">
+                <p id="checkboxP">我已同意并阅读<a href="#">《铁路产品质量管理系统用户注册协议》</a></p>
+            </label>
+        </div>
+    </div>
+     <div class="registerButton">
+         <a href="#">立即注册</a>
+     </div>
+    </form>
+    <div class="register_bottom">
+        铁路产品质量管理系统
+    </div>
+</body>
+</html>
