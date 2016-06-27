@@ -1,0 +1,59 @@
+*{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    font-size: 12px;
+    font-family:'Microsoft Yahei','Arial',Tahoma,'Simsun';
+}
+em{
+    font-style: normal;
+}
+strong{
+    font-weight: normal;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+img{border: none;margin: 0px;padding: 0px;}
+ul,ol,p{
+    margin: 0px;
+}
+#main-container{
+    padding: 0px;
+    position: relative;
+}
+.sidebar{
+    width: 240px;
+    background-color: #eeeeee;
+    border-right: 1px solid #77afea;
+}
+
+#realTime{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #464646;
+    background-color: #e8e7e7;
+    font-size: 18px;
+    border-bottom: 1px solid #c9d5df ;
+}
+#realTime img,.contractOrder img{
+    padding-right: 10px;
+    margin-top:-8px;
+}
+.sidebar ul{
+    background-color: #fafafa;
+}
+.sidebar li{
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+.contractOrder{
+    font-size: 16px;
+    background: url("../images/left_4.png") no-repeat 200px 10px;
+
+}
+.contractOrder ul{
+   border-top: 1px solid #eeeeee;
+}

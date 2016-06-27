@@ -8,22 +8,57 @@
     <script type="text/javascript" src="../js/top.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/left.css">
 </head>
 <body>
     <div class="head">
-        <!--<img class="headFirstImg" src="../images/headlogo.png">-->
+        <div class="head_logo">
+           <img src="../images/head_logo.png">
+        </div>
         <div class="head_choice">
             <ul>
-                <li><img src="../images/head_2.png"></li>
-                <li><img src="../images/head_3.png"></li>
-                <li><img src="../images/head_4.png"></li>
-                <li><img src="../images/head_5.png"></li>
-                <li><img src="../images/head_6.png"></li>
+                <li class="head_homePage"></li>
+                <li class="head_inforMana"></li>
+                <li class="head_pageMana"></li>
+                <li class="head_userMana"></li>
+                <li class="head_systeMana"></li>
             </ul>
         </div>
-        <!--<div class="head_users">-->
-
-        <!--</div>-->
+        <div class="head_users">
+              <div class="login_username">
+                  <p>欢迎您</p>
+                  <span>admin</span>
+              </div>
+              <div class="updatePassword">
+                  <p>修改密码</p>
+              </div>
+              <div class="loginOut">
+                  <p>退出系统</p>
+              </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="main-container">
+        <!--左侧列表-->
+       <div class="sidebar">
+           <div id="realTime"><img src="../images/left_1.png">实时报表</div>
+           <ul>
+               <li class="contractOrder">
+                   <img src="../images/left_2.png">合同订单管理
+                  <ul>
+                      <li>合同信息维护</li>
+                      <li>合同信息查询</li>
+                      <li>订单信息维护</li>
+                      <li>订单信息查询</li>
+                  </ul>
+               </li>
+               <li>编码管理</li>
+               <li>供货计划管理</li>
+               <li>信息查询</li>
+               <li>基础信息管理</li>
+               <li>质量抽查监督信息</li>
+               <li>系统管理</li>
+           </ul>
+       </div>
     </div>
 </body>
 </html>

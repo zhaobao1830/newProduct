@@ -18,37 +18,94 @@ img{border: none;margin: 0px;padding: 0px;}
 
 .head{
     width: 100%;
-    height: 78px;
-    background: url("../images/head01.png") no-repeat;
-    background-size: 100% auto;
+    min-width: 1280px;
+    height: 100px;
+    background: url("../images/head_1.png") no-repeat;
     position: relative;
 }
-.headFirstImg{
-    width: 396px;
-    height: 61px;
+.head_logo{
+    width: 486px;
+    height: 90px;
+    position: absolute;
+    left: 0px;
+    background-image: url("../images/headlogoBcak.png");
+}
+.head_logo img{
+    /*width: 400px;*/
+    margin-left: 20px;
+    margin-top: 13px;
 }
 .head_choice{
     width: auto;
     position: absolute;
     top: 0px;
-    right: 300px;
+    right: 396px;
 }
 .head_choice li{
-    margin-top: 10px;
+    position:relative;/*相对定位*/
+    width: 72px;
+    height: 72px;
+    margin-top: 14px;
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     cursor: pointer;
+    background-image: url("../images/head_2.png");
 }
-.head_choice li img{
-    display: block;
-    width: 55px;
-    height: 55px;
-}
+
 .head_users{
-    width: 300px;
-    height: 20px;
+    width: 366px;
+    height: 30px;
+    line-height: 30px;
     position: absolute;
     bottom: 0px;
     right: 20px;
     background: url("../images/head_7.png") no-repeat;
+}
+.head_users img,.head_users p,.head_users span{
+    display: block;
+    float: left;
+}
+.head_users img{
+    margin-top: 7px;
+}
+.head_users div{
+    float: left;
+    color: white;
+    margin-top: 1px;
+}
+.login_username{
+    margin-left: 52px;
+}
+.login_username p{
+    margin-left: 10px;
+}
+.login_username span{
+    margin-left: 10px;
+    width: 50px;
+    overflow: hidden;
+    color: #fed640;
+}
+.updatePassword{
+    margin-left: 29px;
+    cursor: pointer;
+}
+.loginOut{
+    margin-left: 39px;
+    cursor: pointer;
+}
+
+.head_homePage{
+    background-position: 0 0;
+}
+.head_inforMana{
+    background-position: -82px 0;
+}
+.head_pageMana{
+    background-position: -164px 0;
+}
+.head_userMana{
+    background-position: -246px 0;
+}
+.head_systeMana{
+    background-position: -328px 0;
 }
