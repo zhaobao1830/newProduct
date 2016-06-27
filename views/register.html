@@ -22,18 +22,18 @@
         <p>账号信息</p>
         <div>
             <label><font size="3" color="red">*</font>登录用户名:</label>
-            <input type="text" class="username" id="username" name="username" value="">
+            <input type="text" class="username" id="username" name="username" value=""onblur="checkUsername()">
             <span class="usernameSpanY show"><img src="../images/registerY.png">6-20个字符，包含字数、数字或符号</span>
             <span class="usernameSpanN hide"><img src="../images/registerN.png">请输入登录用户名</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>登录密码:</label>
-            <input type="password" class="password" id="password" name="password" value="">
+            <input type="password" class="password" id="password" name="password" value="" onblur="checkPassword()">
             <span class="passwordSpanN hide"><img src="../images/registerN.png">请输入登录密码</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>确认密码:</label>
-            <input type="password" class="repassword" id="repassword" name="repassword" value="">
+            <input type="password" class="repassword" id="repassword" name="repassword" value="" onblur="checkRepassword()">
             <span class="repasswordSpanY hide"><img src="../images/registerY.png">请输入确认密码</span>
             <span class="repasswordSpanN hide"><img src="../images/registerN.png">俩次密码不一致</span>
         </div>
@@ -42,17 +42,17 @@
         <p>联系人信息</p>
         <div>
             <label><font size="3" color="red">*</font>用户名:</label>
-            <input type="text" class="NAME" id="NAME" name="NAME" value="">
+            <input type="text" class="NAME" id="NAME" name="NAME" value="" onblur="checkName()">
             <span class="NAMESpanN hide"><img src="../images/registerN.png">请输入用户名</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>手机:</label>
-            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="">
+            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="" onblur="checkPhone()">
             <span class="PHONESpanN hide"><img src="../images/registerN.png">请输入手机</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>邮箱:</label>
-            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="">
+            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="" onblur="checkEmail()">
             <span class="EMAILSpanN hide"><img src="../images/registerN.png">请输入邮箱</span>
         </div>
         <div>
