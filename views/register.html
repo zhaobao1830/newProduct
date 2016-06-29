@@ -2,58 +2,53 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="description" content="overview & stats" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>注册页面</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/register.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
     <div class="register_top">
-      <img src="../images/registerLogo.png">
+      <img src="../images/register/registerLogo.png">
       <span>欢迎注册</span>
-      <p>我已经注册，现在就<a>登录</a></p>
+      <p>我已经注册，现在就<a href="login.html" target="_self">登录</a></p>
     </div>
-    <form action="register/saveUserRegis.do" name="userForm" id="userForm" method="post">
+    <form  action="" name="userForm" id="userForm" method="post">
     <div class="accountInformation">
         <p>账号信息</p>
         <div>
             <label><font size="3" color="red">*</font>登录用户名:</label>
-            <input type="text" class="username" id="username" name="username" value=""onblur="checkUsername()">
-            <span class="usernameSpanY show"><img src="../images/registerY.png">6-20个字符，包含字数、数字或符号</span>
-            <span class="usernameSpanN hide"><img src="../images/registerN.png">请输入登录用户名</span>
+            <input type="text" class="username" id="username" name="username" value="" onfocus="checkUsername()">
+            <span class="usernameSpanY hide"><img src="../images/register/registerY.png">6-20个字符，包含字数、数字或符号</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>登录密码:</label>
-            <input type="password" class="password" id="password" name="password" value="" onblur="checkPassword()">
-            <span class="passwordSpanN hide"><img src="../images/registerN.png">请输入登录密码</span>
+            <input type="password" class="password" id="password" name="password" value="" onfocus="checkPassword()">
+            <span class="passwordSpanN hide"><img src="../images/register/registerY.png">请输入登录密码</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>确认密码:</label>
-            <input type="password" class="repassword" id="repassword" name="repassword" value="" onblur="checkRepassword()">
-            <span class="repasswordSpanY hide"><img src="../images/registerY.png">请输入确认密码</span>
-            <span class="repasswordSpanN hide"><img src="../images/registerN.png">俩次密码不一致</span>
+            <input type="password" class="repassword" id="repassword" name="repassword" value="" onfocus="checkRepassword()">
+            <span class="repasswordSpanY hide"><img src="../images/register/registerY.png">请输入确认密码</span>
+            <span class="repasswordSpanN hide"><img src="../images/register/registerN.png">俩次密码不一致</span>
         </div>
     </div>
     <div class="contactsInformation">
         <p>联系人信息</p>
         <div>
             <label><font size="3" color="red">*</font>用户名:</label>
-            <input type="text" class="NAME" id="NAME" name="NAME" value="" onblur="checkName()">
-            <span class="NAMESpanN hide"><img src="../images/registerN.png">请输入用户名</span>
+            <input type="text" class="NAME" id="NAME" name="NAME" value="" onfocus="checkName()">
+            <span class="NAMESpanN hide"><img src="../images/register/registerY.png">请输入用户名</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>手机:</label>
-            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="" onblur="checkPhone()">
-            <span class="PHONESpanN hide"><img src="../images/registerN.png">请输入手机</span>
+            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="" onfocus="checkPhone()">
+            <span class="PHONESpanN hide"><img src="../images/register/registerY.png">请输入手机</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>邮箱:</label>
-            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="" onblur="checkEmail()">
-            <span class="EMAILSpanN hide"><img src="../images/registerN.png">请输入邮箱</span>
+            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="" onfocus="checkEmail()">
+            <span class="EMAILSpanN hide"><img src="../images/register/registerY.png">请输入邮箱</span>
         </div>
         <div>
             <label>用户角色:</label>

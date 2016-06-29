@@ -16,50 +16,67 @@ a{text-decoration: none;}
 a:hover{text-decoration: none;}
 img{border: none;margin: 0px;padding: 0px;}
 
+
+#background{
+    position:absolute;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
 .login_containt{
     width: 100%;
-    text-align: center;
-    margin: 0px auto;
-    position: absolute;
+    height: 100%;
 }
 .login_box{
-    width: 1050px;
+    position: absolute;
+    width: 1054px;
+    height: 354px;
     overflow: hidden !important;
-    text-align: center;
-    margin: 10% auto;
+    /*text-align: center;*/
+    /*vertical-align:middle;*/
+    top: 50%;
+    left: 50%;
+    margin-left:-527px;
+    margin-top:-172px;
 }
 .login_logo{
-    width: 480px;
+    width: 477px;
     float: left;
     margin-top: 143px;
 }
 .login_form{
-    width: 530px;
-    height: 341px;
+    width: 540px;
+    height: 345px;
     background-color: #339fc0;
     float: left;
-    margin-left: 25px;
+    margin-left: 30px;
     border-radius: 10px;
+    box-shadow: 0px 6px 3px #196f97;
     border: 2px solid #2fc3e2;
 }
 .login_box:after{
     content: "";
     clear: both;
 }
-.systemLogin,.loginError{
-    width: 510px;
-    height: 35px;
-    margin: 10px;
-    line-height: 35px;
+.systemLogin{
+    width: 514px;
+    height: 40px;
+    margin: 13px 13px 0px 13px;
+    line-height: 40px;
     float: left;
     border-radius: 5px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.loginError{
+    width: 510px;
+    height: 36px;
+    margin: 15px 15px 0px 15px;
+    float: left;
+    border-radius: 4px;
 }
 .systemLogin{
-    background-color: #287ec5;
-    /*border: 1px solid #3899d5;*/
+    background:url("../images/login/loginTitle.png") no-repeat;
 }
 .systemLogin p{
     font-size: 16px;
@@ -68,8 +85,7 @@ img{border: none;margin: 0px;padding: 0px;}
     float: left;
 }
 .loginError{
-    background-color: #f01f1f;
-    border: 1px solid #f01f1f;
+   background: url("../images/login/loginTitleError.png") no-repeat;
 }
 .loginError img{
     float: left;
@@ -77,53 +93,50 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-left: 10px;
 }
 .loginError p{
-    font-size: 14px;
     color: white;
-    margin-left: 10px;
     float: left;
-}
-.loginError a{
-    width: 16px;
-    height: 16px;
-    float: right;
-    display: block;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-.loginError a img{
-    margin-top: 0;
-    margin-left: 0;
+    margin-left: 10px;
+    line-height: 36px;
 }
 .login_content{
     width: 510px;
     height: 270px;
-    margin: 55px 10px 10px 10px;
-    background-color: #cde8ef;
+    margin: 60px 15px 0px 15px;
+    background-color: rgb(205,230,240);
+    /*filter:alpha(opacity=75); /!*IE滤镜，透明度50%*!/*/
+    /*-moz-opacity:0.75; /!*Firefox私有，透明度50%*!/*/
+    /*opacity:0.75;/!*其他，透明度50%*!/*/
+    border-radius: 4px;
 }
 .username-group{
     padding: 30px 80px 0px 80px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
 }
+
 .username-group label,.password-group label{
     width: 56px;
     float: left;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     margin: 0px;
+    font-size: 14px;
+    color: #464646;
 }
 .username-group input,.password-group input{
-    width: 268px;
+    width: 278px;
     float: left;
-    height: 25px;
-    line-height: 25px;
-    margin: 0px;
+    height: 37px;
+    line-height: 40px;
     margin-left: 12px;
+    border-radius: 2px;
+    border: 1px solid #bbbbbb;
+    background-color: white;
 }
 .password-group{
     padding: 20px 80px 0px 80px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
 }
 .save-group{
     margin: 20px 80px 0 150px;
@@ -132,11 +145,23 @@ img{border: none;margin: 0px;padding: 0px;}
 }
 .save-group input{
     margin-top: -2px;
+    border: none;
+    display: none;
+    width: 16px;
+    height: 16px;
 }
-.save-group label{
+.save-group div{
     float: left;
     margin-bottom: 0px;
     line-height: 16px;
+    cursor: pointer;
+}
+.savePasswordSpan{
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin-right: 10px;
 }
 .savePassword{
     width: 80px;
@@ -146,11 +171,13 @@ img{border: none;margin: 0px;padding: 0px;}
     float: right;
     text-decoration: none;
     font-size: 14px;
+    color: #438eb9;
 }
 .login_button{
     margin: 30px 80px 0 150px;
     height: 16px;
     line-height: 16px;
+    text-align: center;
 }
 .login_button a{
     width: 70px;
@@ -160,15 +187,29 @@ img{border: none;margin: 0px;padding: 0px;}
     display: block;
 }
 .loginButton{
-    background-color: #4693d2;
+    background: url("../images/login/loginButton.png") no-repeat;
     border-radius: 5px;
     float: left;
     color: white;
     margin-left: 130px;
 }
 .noLoginButton{
-    background-color: white;
+    background: url("../images/login/cancelLogin.png") no-repeat;
     border-radius: 5px;
     float: right;
-    color: #868686;
+    color: #464646;
+}
+
+/*公共类*/
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.inputClick{
+    background: url("../images/login/inputClick.png") no-repeat;
+}
+.inputNoClick{
+    background: url("../images/login/inputNoClick.png") no-repeat;
 }

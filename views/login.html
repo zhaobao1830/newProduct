@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <title>登陆页</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/login.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-<div id="background" style="position:absolute;z-index:-1;width:100%;height:100%;top:0px;left:0px;"><img src="../images/loginBackground.png" width="100%" height="100%"/></div>
-    <div class="login_containt">
+        <div id="background">
+           <img src="../images/login/loginBackGround.png" width="100%" height="100%"/>
+        </div>
+        <div class="login_containt">
         <div class="login_box">
             <div class="login_logo">
-                <img src="../images/loginLogo.png">
+                <img src="../images/login/logo.png">
             </div>
             <form action="" method="post" name="loginForm" id="loginForm">
                 <div class="login_form">
@@ -22,25 +22,25 @@
                         <p>系统登录</p>
                     </div>
                     <div class="loginError hide">
-                        <img src="../images/loginError.png">
-                        <p>用户名或密码不正确</p>
-                        <a  href="javascript:;"><img class="loginErrorA" src="../images/loginErrorClose.png"></a>
+                        <img src="../images/login/loginError.png">
+                        <p>用户名或密码不正确。</p>
                     </div>
                     <div class="login_content">
                          <div class="username-group">
                              <label>用户名：</label>
-                             <input type="text" name="username" id="username" value="">
+                                 <input type="text" name="username" id="username" value="">
                          </div>
                         <div class="password-group">
                             <label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
                             <input type="password" name="password" id="password" value="">
                         </div>
                         <div class="save-group">
-                            <label for="savePassword">
+                            <div  onclick="savePass()">
                                 <input id="savePassword" type="checkbox" name="savePassword" checked>
+                                 <span class="savePasswordSpan inputClick"></span>
                                 记住密码
-                            </label>
-                            <a href="#" target="_self">注册</a>
+                            </div>
+                            <a href="register.html" target="_self">注册</a>
                         </div>
                         <div class="login_button">
                              <a class="loginButton" href="javascript:;" onclick="login()">登&nbsp;录</a>

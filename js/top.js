@@ -2,13 +2,13 @@
  * Created by zb on 2016/6/24.
  */
 $(function(){
-    //¸øhead_choice li°ó¶¨clickÊÂ¼ş£¬µã»÷µÄÊ±ºò£¬Í¨¹ıclickLi»ñÈ¡µ½ÉÏÒ»¸öµã»÷µÄbackground-positionÖµ
-    //Èç¹ûÓĞ£¬Ôò¸Ä±äËüµÄbackground-positionÖµ
-    //ĞŞ¸Äµã»÷µÄµ±Ç°liµÄbackground-positionÖµ£¬²¢ÇÒÌí¼ÓclickLi
+    //ç»™head_choice liç»‘å®šclickäº‹ä»¶ï¼Œç‚¹å‡»çš„æ—¶å€™ï¼Œé€šè¿‡clickLiè·å–åˆ°ä¸Šä¸€ä¸ªç‚¹å‡»çš„background-positionå€¼
+    //å¦‚æœæœ‰ï¼Œåˆ™æ”¹å˜å®ƒçš„background-positionå€¼
+    //ä¿®æ”¹ç‚¹å‡»çš„å½“å‰liçš„background-positionå€¼ï¼Œå¹¶ä¸”æ·»åŠ clickLi
 
-    var oldPostionLeft //µã»÷ÒÔÇ°µÄbackground-position leftÖµ
-    var clickLiPostion  //ÉÏÒ»¸öµã»÷µÄbackground-positionÖµ
-    var clickLiPostionLeft  //ÉÏÒ»¸öµã»÷µÄbackground-position leftÖµ
+    var oldPostionLeft //ç‚¹å‡»ä»¥å‰çš„background-position leftå€¼
+    var clickLiPostion  //ä¸Šä¸€ä¸ªç‚¹å‡»çš„background-positionå€¼
+    var clickLiPostionLeft  //ä¸Šä¸€ä¸ªç‚¹å‡»çš„background-position leftå€¼
     $(".head_choice li").on("click",function(){
         clickLiPostion=$(".clickLi").css("background-position")
         if(clickLiPostion){
@@ -23,4 +23,47 @@ $(function(){
         $(this).addClass("clickLi")
     })
 
+    /*ç»™å·¦è¾¹çš„Liæ·»åŠ clickäº‹ä»¶
+     * ç‚¹å‡»ä»¥åï¼Œå…ˆremoveå…„å¼Ÿç±»çš„liClickï¼Œæ·»åŠ liNoClick
+     * ç‚¹å‡»çš„Liæ·»åŠ æ·»åŠ liNoClickï¼Œremove liClick
+     * ä¿®æ”¹imgçš„srcå€¼
+     * */
+    $(".realTimeLi ul li").on("click",function(){
+        $(this).siblings().removeClass("liClick").addClass("liNoClick")
+        $(this).siblings().find("img").attr("src","../images/left_5.png")
+        $(this).removeClass("liNoClick").addClass("liClick")
+        $(this).find("img").attr("src","../images/left_6.png")
+    })
+
+    /*ç»™contractOrder_titleç»‘å®šclickäº‹ä»¶*/
+    $(".realTimeDiv").on("click",function(){
+        var fc //è·å–æœ€å·¦è¾¹çš„classå€¼
+        fc=$(this).attr("class").split(" ")[0]
+        if($("."+fc+"_ul").hasClass("show")){
+            $("."+fc).removeClass("ulClick").addClass("ulNoClick")
+            $("."+fc).find("img").attr("src","../images/"+fc+"_n.png")
+            $("."+fc+"_ul").removeClass("show").addClass("hide")
+        }else{
+            operRealTimeLi()
+            $("."+fc).removeClass("ulNoClick").addClass("ulClick")
+            $("."+fc).find("img").attr("src","../images/"+fc+"_y.png")
+            $("."+fc+"_ul").removeClass("hide").addClass("show")
+        }
+    })
 })
+
+
+/*éå†realTimeLiï¼Œåˆ¤æ–­é‡Œé¢çš„divæ˜¯å¦æœ‰ulNoClickï¼Œå¦‚æœæœ‰ï¼Œå°±ç§»é™¤ï¼Œæ·»åŠ ulClick*/
+function operRealTimeLi(){
+    var divClass //è·å–div
+    var firstClass  //è·å–divé‡Œé¢çš„ç¬¬ä¸€ä¸ªclass
+    for(var i= 0;i<$(".realTimeLi").length;i++){
+        divClass=$(".realTimeLi").eq(i).find("div")
+        if(divClass.hasClass("ulClick")){
+            firstClass=$(".realTimeLi").eq(i).find("div").attr("class").split(" ")[0]
+            divClass.removeClass("ulClick").addClass("ulNoClick")
+            divClass.find("img").attr("src","../images/"+firstClass+"_n.png")
+            $("."+firstClass+"_ul").removeClass("show").addClass("hide")
+        }
+    }
+}

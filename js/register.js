@@ -28,11 +28,9 @@ function checkUsername(){
     var userNameValue
     userNameValue=$(".username").val()
     if(userNameValue){
-        $(".usernameSpanY").removeClass("hide").addClass("show")
-        $(".usernameSpanN").removeClass("show").addClass("hide")
-    }else{
         $(".usernameSpanY").removeClass("show").addClass("hide")
-        $(".usernameSpanN").removeClass("hide").addClass("show")
+    }else{
+        $(".usernameSpanY").removeClass("hide").addClass("show")
     }
 }
 
@@ -49,7 +47,7 @@ function checkPassword(){
 /*ºÏ≤‚÷ÿ∏¥µ«¬º√‹¬Î*/
 function checkRepassword(){
     var repasswordVal,passwordValue
-    repasswordVal=$(".repassword")
+    repasswordVal=$(".repassword").val()
     passwordValue=$(".password").val()
     if(repasswordVal){
         $(".repasswordSpanY").removeClass("show").addClass("hide")

@@ -2,7 +2,7 @@
     padding:0px;
     margin:0px;
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
     font-family:'Microsoft Yahei','Arial',Tahoma,'Simsun';
 }
 em{
@@ -42,7 +42,10 @@ img{border: none;margin: 0px;padding: 0px;}
     font-size: 12px;
 }
 .register_top a{
+    font-size: 12px;
     cursor: pointer;
+    color: #438eb9;
+    padding-left: 5px;
 }
 .accountInformation,.contactsInformation,.registerButton{
     width:1080px;
@@ -61,27 +64,28 @@ img{border: none;margin: 0px;padding: 0px;}
 }
 .accountInformation div,.contactsInformation div{
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
     margin-top: 20px;
 }
 .accountInformation label,.contactsInformation label{
     width: 120px;
     text-align: right;
     float: left;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
 }
 .accountInformation input,.contactsInformation input{
     width: 300px;
     float: left;
     margin-left: 10px;
-    height: 25px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     margin-bottom: 0px;
+    border: 1px solid #bbbbbb;
 }
 .contactsInformation select{
-    width: 314px;
+    width: 300px;
     float: left;
     margin-left: 10px;
     height: 35px;
@@ -93,14 +97,15 @@ img{border: none;margin: 0px;padding: 0px;}
     float: left;
     margin-left: 10px;
     font-size: 14px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     color: #777777;
 }
 .accountInformation span img,.contactsInformation span img{
-    display: inline-block;
+    display: block;
     padding-right: 5px;
-    margin-top: -5px;
+    margin-top: 10px;
+    float: left;
 }
 #register_codes{
     width: 120px;
@@ -173,4 +178,12 @@ img{border: none;margin: 0px;padding: 0px;}
     color: white;
     top: 20px;
     position: relative;
+}
+
+/*公共类*/
+.show{
+    display: block;
+}
+.hide{
+    display: none;
 }
