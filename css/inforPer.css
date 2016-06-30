@@ -5,6 +5,10 @@
     font-size: 12px;
     font-family: 'Arial','Microsoft Yahei',Tahoma,'Simsun';
 }
+html,body{
+    height:100%;
+    margin:0px;
+}
 em{
     font-style: normal;
 }
@@ -15,3 +19,84 @@ li{list-style: none;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
 img{border: none;margin: 0px;padding: 0px;}
+
+.inforPerContain{
+    /*width: 100%;*/
+    padding:0;
+    background-color: #dae6ef;
+    position: relative;
+    height: 100%;
+}
+.inforPer_left{
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid #77afea;
+    background-color: #eeeeee;
+    float: left;
+}
+
+#realTime{
+    height: 50px;
+    line-height: 50px;
+    color: #464646;
+    background-color: #e8e7e7;
+    font-size: 18px;
+    border-bottom: 1px solid #c9d5df ;
+}
+#realTime img,.contractOrder img{
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-top:-8px;
+}
+.inforPer_left ul {
+    background-color: #fafafa;
+}
+.inforPer_left ul li {
+    line-height: 40px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.realTimeDiv{
+    font-size: 16px;
+    background-position: 200px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.realTimeLi img{
+    padding-right: 10px;
+}
+
+/*左边ul title的俩个css*/
+.infor_Click{
+    background-image: url("../images/inforPer/click_y.png");
+    color: #4ea0ea;
+}
+.infor_NoClick{
+    background-image: url("../images/inforPer/click_n.png");
+    color: #222222;
+}
+
+.inforPer_right{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    /*position: absolute;*/
+    float: left;
+    border: 1px solid #dae6ef;
+}
+.ss{
+    width: auto;
+    height: 400px;
+    background-color: white;
+}
+/*左边li的俩个css*/
+.liClick{
+    background-image: url("../images/left/left_7.png");
+    background-position: 232px 0px;
+    background-repeat: no-repeat;
+    color: #4ea0ea;
+}
+.liNoClick{
+    color: #464646;
+}

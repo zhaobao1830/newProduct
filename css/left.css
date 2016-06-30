@@ -20,9 +20,8 @@ ul,ol,p{
 }
 #main-container{
     padding: 0px;
-    /*position: relative;*/
-    background-color: #eeeeee;
-   height: 100%;
+    /*background-color: #eeeeee;*/
+    height: 100%;
     position: fixed;
 }
 .sidebar{
@@ -33,20 +32,20 @@ ul,ol,p{
 #realTime{
     height: 50px;
     line-height: 50px;
-    text-align: center;
     color: #464646;
     background-color: #e8e7e7;
     font-size: 18px;
     border-bottom: 1px solid #c9d5df ;
 }
 #realTime img,.contractOrder img{
+    padding-left: 50px;
     padding-right: 10px;
     margin-top:-8px;
 }
 .sidebar ul{
     background-color: #fafafa;
 }
-.sidebar li{
+.sidebar ul li{
     line-height: 40px;
     border-bottom: 1px solid #eeeeee;
 }
@@ -55,7 +54,6 @@ ul,ol,p{
     font-size: 16px;
     background-position: 200px 10px;
     background-repeat: no-repeat;
-    background-color: #eaf3f8;
     cursor: pointer;
     padding-left: 20px;
 }

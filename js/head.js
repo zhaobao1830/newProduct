@@ -30,23 +30,23 @@ $(function(){
      * */
     $(".realTimeLi ul li").on("click",function(){
         $(this).siblings().removeClass("liClick").addClass("liNoClick")
-        $(this).siblings().find("img").attr("src","../images/left_5.png")
+        $(this).siblings().find("img").attr("src","../images/left/left_5.png")
         $(this).removeClass("liNoClick").addClass("liClick")
-        $(this).find("img").attr("src","../images/left_6.png")
+        $(this).find("img").attr("src","../images/left/left_6.png")
     })
 
     /*给contractOrder_title绑定click事件*/
+    var fc //获取最左边的class值
     $(".realTimeDiv").on("click",function(){
-        var fc //获取最左边的class值
         fc=$(this).attr("class").split(" ")[0]
         if($("."+fc+"_ul").hasClass("show")){
             $("."+fc).removeClass("ulClick").addClass("ulNoClick")
-            $("."+fc).find("img").attr("src","../images/"+fc+"_n.png")
+            $("."+fc).find("img").attr("src","../images/left/"+fc+"_n.png")
             $("."+fc+"_ul").removeClass("show").addClass("hide")
         }else{
             operRealTimeLi()
             $("."+fc).removeClass("ulNoClick").addClass("ulClick")
-            $("."+fc).find("img").attr("src","../images/"+fc+"_y.png")
+            $("."+fc).find("img").attr("src","../images/left/"+fc+"_y.png")
             $("."+fc+"_ul").removeClass("hide").addClass("show")
         }
     })
@@ -62,7 +62,7 @@ function operRealTimeLi(){
         if(divClass.hasClass("ulClick")){
             firstClass=$(".realTimeLi").eq(i).find("div").attr("class").split(" ")[0]
             divClass.removeClass("ulClick").addClass("ulNoClick")
-            divClass.find("img").attr("src","../images/"+firstClass+"_n.png")
+            divClass.find("img").attr("src","../images/left/"+firstClass+"_n.png")
             $("."+firstClass+"_ul").removeClass("show").addClass("hide")
         }
     }
