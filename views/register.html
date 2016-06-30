@@ -18,17 +18,17 @@
         <p>账号信息</p>
         <div>
             <label><font size="3" color="red">*</font>登录用户名:</label>
-            <input type="text" class="username" id="username" name="username" value="" onfocus="checkUsername()">
-            <span class="usernameSpanY hide"><img src="../images/register/registerY.png">6-20个字符，包含字数、数字或符号</span>
+            <input type="text" class="loginUserName" id="loginUserName" name="loginUserName" value="" onfocus="checkLoginUsername()" onblur="checkLoginUsername1()">
+            <span class="loginUserNameSpanY hide"><img src="../images/register/registerY.png">6-20个字符，包含字数、数字或符号</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>登录密码:</label>
-            <input type="password" class="password" id="password" name="password" value="" onfocus="checkPassword()">
+            <input type="password" class="password" id="password" name="password" value="" onfocus="checkPassword()" onblur="checkPassword1()">
             <span class="passwordSpanN hide"><img src="../images/register/registerY.png">请输入登录密码</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>确认密码:</label>
-            <input type="password" class="repassword" id="repassword" name="repassword" value="" onfocus="checkRepassword()">
+            <input type="password" class="repassword" id="repassword" name="repassword" value="" onfocus="checkRepassword()" onblur="checkRepassword1()">
             <span class="repasswordSpanY hide"><img src="../images/register/registerY.png">请输入确认密码</span>
             <span class="repasswordSpanN hide"><img src="../images/register/registerN.png">俩次密码不一致</span>
         </div>
@@ -37,18 +37,20 @@
         <p>联系人信息</p>
         <div>
             <label><font size="3" color="red">*</font>用户名:</label>
-            <input type="text" class="NAME" id="NAME" name="NAME" value="" onfocus="checkName()">
-            <span class="NAMESpanN hide"><img src="../images/register/registerY.png">请输入用户名</span>
+            <input type="text" class="userName" id="userName" name="userName" value="" onfocus="checkUserName()" onblur="checkUserName1()">
+            <span class="userNamepanN hide"><img src="../images/register/registerY.png">请输入用户名</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>手机:</label>
-            <input type="text" class="PHONE" id="PHONE" name="PHONE" value="" onfocus="checkPhone()">
-            <span class="PHONESpanN hide"><img src="../images/register/registerY.png">请输入手机</span>
+            <input type="tel" class="phone" id="phone" name="phone" value="" onfocus="checkPhone()" onblur="checkPhone1()">
+            <span class="phoneSpanY hide"><img src="../images/register/registerY.png">请输入手机</span>
+            <span class="phoneSpanN hide"><img src="../images/register/registerN.png">手机格式不正确</span>
         </div>
         <div>
             <label><font size="3" color="red">*</font>邮箱:</label>
-            <input type="text" class="EMAIL" id="EMAIL" name="EMAIL" value="" onfocus="checkEmail()">
-            <span class="EMAILSpanN hide"><img src="../images/register/registerY.png">请输入邮箱</span>
+            <input type="email" class="email" id="email" name="email" value="" onfocus="checkEmail()" onblur="checkEmail1()">
+            <span class="emailSpanY hide"><img src="../images/register/registerY.png">请输入邮箱</span>
+            <span class="emailSpanN hide"><img src="../images/register/registerN.png">邮箱格式不正确</span>
         </div>
         <div>
             <label>用户角色:</label>
@@ -72,14 +74,16 @@
             <span  onclick="createCode()" id="checkCode"></span>
         </div>
         <div id="registerCheck">
-            <label id="check_register" for="register_check">
-                <input type="checkbox" id="register_check">
-                <p id="checkboxP">我已同意并阅读<a href="#">《铁路产品质量管理系统用户注册协议》</a></p>
-            </label>
+            <div id="check_register" onclick="checkRegister()">
+                <input type="checkbox" id="register_check" checked>
+                <span class="registerSpan inputClick" id="registerSpan"></span>
+                <p id="checkboxP">我已同意并阅读</p>
+            </div>
+            <a class="registerCheckA" href="#">《铁路产品质量管理系统用户注册协议》</a>
         </div>
     </div>
-     <div class="registerButton">
-         <a href="#">立即注册</a>
+     <div class="registerButton registerNoButton">
+         <a class="registera registerNoa" href="javascript:;" onclick="formSubmit()">立即注册</a>
      </div>
     </form>
     <div class="register_bottom">

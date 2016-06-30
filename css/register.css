@@ -51,7 +51,7 @@ img{border: none;margin: 0px;padding: 0px;}
     width:1080px;
     margin: 0px auto;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .accountInformation{
     border-bottom: 2px solid #dddddd;
@@ -79,7 +79,7 @@ img{border: none;margin: 0px;padding: 0px;}
     width: 300px;
     float: left;
     margin-left: 10px;
-    height: 40px;
+    height: 38px;
     line-height: 40px;
     margin-bottom: 0px;
     border: 1px solid #bbbbbb;
@@ -104,7 +104,7 @@ img{border: none;margin: 0px;padding: 0px;}
 .accountInformation span img,.contactsInformation span img{
     display: block;
     padding-right: 5px;
-    margin-top: 10px;
+    margin-top: 7px;
     float: left;
 }
 #register_codes{
@@ -125,18 +125,22 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-left: 130px;
     margin-top: -1px;
     margin-right: 10px;
+    display: none;
+    border: none;
 }
 #registerCheck{
     height: 20px;
-    line-height: 20px;
 }
-.contactsInformation a{
+.registerCheckA{
     font-size: 14px;
     height: 20px;
     line-height: 20px;
+    color: #438eb9;
+    float: left;
+    display: block;
 }
 #checkboxP{
-    width: 400px;
+    width: 100px;
     float: left;
     text-align: left;
     color: #222222;
@@ -145,28 +149,22 @@ img{border: none;margin: 0px;padding: 0px;}
     line-height: 20px;
     margin-top: 0px;
     font-weight: normal;
+    cursor: pointer;
 }
-.registerButton{
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #3a8ece;
-    margin-left: 265px;
-    padding-bottom: 0px;
-    border-radius: 5px;
 
-}
+
 .registerButton a{
     font-size: 18px;
-    color: white;
     display: block;
     height: 40px;
     line-height: 40px;
     text-align: center;
 }
 #check_register{
-    width: 1080px;
+    width: 256px;
     height: 20px;
+    float: left;
+    margin-top: 0px;
 }
 .register_bottom{
     width: 100%;
@@ -180,10 +178,47 @@ img{border: none;margin: 0px;padding: 0px;}
     position: relative;
 }
 
+#registerSpan {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-left: 130px;
+    cursor: pointer;
+}
+
+.registerButton{
+     width: 200px;
+     height: 40px;
+     line-height: 40px;
+     margin-left: 265px;
+     padding-bottom: 0px;
+     border-radius: 5px;
+ }
+.registerCanButton{
+    background: url("../images/register/registerCanButton.png") no-repeat;
+}
+.registerNoButton{
+    background: url("../images/register/registerNoButton.png") no-repeat;
+}
+.registerCana{
+    color: white;
+}
+.registerNoa{
+    color: #464646;
+}
 /*公共类*/
 .show{
     display: block;
 }
 .hide{
     display: none;
+}
+
+.inputClick{
+    background: url("../images/login/inputClick.png") no-repeat;
+}
+.inputNoClick{
+    background: url("../images/login/inputNoClick.png") no-repeat;
 }
