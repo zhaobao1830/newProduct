@@ -5,8 +5,8 @@
 
 $(function(){
     //演示使用
-    $(".head_systeMana").css("background-position","-328px -82px")
-    $(".head_systeMana").addClass("clickLi")
+    $(".head_userMana").css("background-position","-328px -82px")
+    $(".head_userMana").addClass("clickLi")
 
     /*给左边的Li绑定click事件*/
     var fc //获取最左边的class值

@@ -21,7 +21,7 @@ img{border: none;margin: 0px;padding: 0px;}
     margin: 30px auto 0px;
     height: 85px;
     position: relative;
-    border-bottom: 2px solid #dddddd;
+    border-bottom:1px solid #dddddd;
 }
 
 .register_top span{
@@ -47,14 +47,18 @@ img{border: none;margin: 0px;padding: 0px;}
     color: #438eb9;
     padding-left: 5px;
 }
-.accountInformation,.contactsInformation,.registerButton{
-    width:1080px;
-    margin: 0px auto;
-    position: relative;
+.accountInformation,.contactsInformation{
+     width:1080px;
+     margin: 0px auto;
+ }
+.accountInformation{
+    padding-bottom:20px;
+}
+.contactsInformation{
     padding-bottom: 30px;
 }
 .accountInformation{
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 .accountInformation p,.contactsInformation p{
     font-size: 16px;
@@ -74,6 +78,7 @@ img{border: none;margin: 0px;padding: 0px;}
     height: 40px;
     line-height: 40px;
     font-size: 14px;
+    color: #464646;
 }
 .accountInformation input,.contactsInformation input{
     width: 300px;
@@ -82,7 +87,8 @@ img{border: none;margin: 0px;padding: 0px;}
     height: 38px;
     line-height: 40px;
     margin-bottom: 0px;
-    border: 1px solid #bbbbbb;
+    border-width: 1px;
+    border-style: solid;
 }
 .contactsInformation select{
     width: 300px;
@@ -91,6 +97,7 @@ img{border: none;margin: 0px;padding: 0px;}
     height: 35px;
     line-height: 35px;
     margin-bottom: 0px;
+    color: #464646;
 }
 .accountInformation span,.contactsInformation span{
     width: auto;
@@ -143,7 +150,7 @@ img{border: none;margin: 0px;padding: 0px;}
     width: 100px;
     float: left;
     text-align: left;
-    color: #222222;
+    color: #464646;
     font-size: 14px;
     height: 20px;
     line-height: 20px;
@@ -174,7 +181,6 @@ img{border: none;margin: 0px;padding: 0px;}
     line-height: 30px;
     font-size: 12px;
     color: white;
-    top: 20px;
     position: relative;
 }
 
@@ -188,25 +194,33 @@ img{border: none;margin: 0px;padding: 0px;}
     cursor: pointer;
 }
 
+.register_button{
+    width: 1080px;
+    margin: 0px auto;
+}
 .registerButton{
      width: 200px;
      height: 40px;
      line-height: 40px;
-     margin-left: 265px;
-     padding-bottom: 0px;
-     border-radius: 5px;
+     margin-left: 130px;
+     margin-bottom: 60px;
+     border-radius: 2px;
  }
-.registerCanButton{
-    background: url("../images/register/registerCanButton.png") no-repeat;
+.registera{
+    background: url("../images/register/registerNoButton.png");
+    color: #464646;
 }
-.registerNoButton{
-    background: url("../images/register/registerNoButton.png") no-repeat;
-}
-.registerCana{
+.registera:hover{
+    background: url("../images/register/registerCanButton.png");
     color: white;
 }
-.registerNoa{
-    color: #464646;
+
+#checkSpanY{
+    height: 20px;
+    line-height: 20px;
+}
+#checkSpanY img{
+    margin-top: -2px;
 }
 /*公共类*/
 .show{
@@ -221,4 +235,11 @@ img{border: none;margin: 0px;padding: 0px;}
 }
 .inputNoClick{
     background: url("../images/login/inputNoClick.png") no-repeat;
+}
+
+.yesInput{
+    border-color: #bbbbbb;
+}
+.errorInput{
+    border-color:  #f01f1f;
 }
