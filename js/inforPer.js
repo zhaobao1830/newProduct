@@ -8,7 +8,14 @@ $(function(){
     $(".head_userMana").css("background-position","-328px -82px")
     $(".head_userMana").addClass("clickLi")
 
-    /*给左边的Li绑定click事件*/
+    /*确定mainFrame，inforPer_left,inforPer_right的高度*/
+    $("#mainFrame").height(document.body.scrollHeight-150);
+    $(".inforPer_left").height(document.body.scrollHeight-100)
+    $(".inforPer_right").height(document.body.scrollHeight-100)
+    //$(".ipr").height(document.body.scrollHeight-140)
+
+
+        /*给左边的Li绑定click事件*/
     var fc //获取最左边的class值
     $(".inforPer_left ul li").on("click",function(){
         fc=$(this).attr("class").split(" ")[0]

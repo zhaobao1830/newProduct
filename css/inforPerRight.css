@@ -1,0 +1,113 @@
+*{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    font-size: 12px;
+    font-family: 'Arial','Microsoft Yahei',Tahoma,'Simsun';
+}
+html,body{
+    height:99%;
+    margin:0px;
+}
+em{
+    font-style: normal;
+}
+strong{
+    font-weight: normal;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+img{border: none;margin: 0px;padding: 0px;}
+
+.personInformation{
+    width: 100%;
+    min-width: 700px;
+}
+
+.personInformation div{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+}
+.personInformation label{
+    width: 120px;
+    text-align: right;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #464646;
+}
+.personInformation input{
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+    height: 38px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    border-width: 1px;
+    border-style: solid;
+}
+.personInformation select{
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 0px;
+    color: #464646;
+}
+.personInformation span{
+    width: auto;
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: #777777;
+}
+.personInformation span img{
+    display: block;
+    padding-right: 5px;
+    margin-top: 7px;
+    float: left;
+}
+.ipr_button{
+    width: 700px;
+    height: 36px;
+    margin: 0px auto;
+}
+.iprSave,.iprReset{
+    width: 84px;
+    height: 36px;
+    border-radius: 2px;
+    display: block;
+    line-height: 36px;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+}
+.iprSave{
+    color: white;
+    background: url("../images/inforPerRight/ifp_1.png") no-repeat;
+    margin-left: 129px;
+}
+.iprReset{
+    background: url("../images/inforPerRight/ifp_2.png") no-repeat;
+    color: #464646;
+    margin-left: 20px;
+}
+/*¹«¹²Àà*/
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.yesInput{
+    border-color: #bbbbbb;
+}
+.errorInput{
+    border-color:  #f01f1f;
+}

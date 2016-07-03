@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+
+    <link rel="stylesheet" href="../css/inforPerRight.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #dae6ef;
+        }
+        .ipr{
+            margin-top: 20px;
+            background-color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="ipr">
+       <form action="" name="userForm" id="userForm" method="post">
+          <div class="personInformation">
+
+           <div>
+               <label><font size="3" color="red">*</font>登录用户名：</label>
+               <input type="text" class="loginUserName yesInput" id="loginUserName" name="loginUserName" value="" onfocus="checkLoginUsername()" onblur="checkLoginUsername1()">
+               <span class="loginUserNameSpanY hide"><img src="../images/register/registerY.png">6-20个字符，包含字数、数字或符号</span>
+               <span class="loginUserNameSpanN hide"><img src="../images/register/registerN.png">用户名格式不正确</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>登录密码：</label>
+               <input type="password" class="password yesInput" id="password" name="password" value="" onfocus="checkPassword()" onblur="checkPassword1()">
+               <span class="passwordSpanN hide"><img src="../images/register/registerY.png">请输入登录密码</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>确认密码：</label>
+               <input type="password" class="repassword yesInput" id="repassword" name="repassword" value="" onfocus="checkRepassword()" onblur="checkRepassword1()">
+               <span class="repasswordSpanY hide"><img src="../images/register/registerY.png">请输入确认密码</span>
+               <span class="repasswordSpanN hide"><img src="../images/register/registerN.png">俩次密码不一致</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>用户名：</label>
+               <input type="text" class="userName yesInput" id="userName" name="userName" value="" onfocus="checkUserName()" onblur="checkUserName1()">
+               <span class="userNamepanN hide"><img src="../images/register/registerY.png">请输入用户名</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>手机：</label>
+               <input type="tel" class="phone yesInput" id="phone" name="phone" value="" onfocus="checkPhone()" onblur="checkPhone1()">
+               <span class="phoneSpanY hide"><img src="../images/register/registerY.png">请输入手机</span>
+               <span class="phoneSpanN hide"><img src="../images/register/registerN.png">手机格式不正确</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>邮箱：</label>
+               <input type="email" class="email yesInput" id="email" name="email" value="" onfocus="checkEmail()" onblur="checkEmail1()">
+               <span class="emailSpanY hide"><img src="../images/register/registerY.png">请输入邮箱</span>
+               <span class="emailSpanN hide"><img src="../images/register/registerN.png">邮箱格式不正确</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>用户角色：</label>
+               <select class="userRole yesInput" onfocus="checkUserRole()" onblur="checkUserRole1()">
+                   <option value="">---请选择---</option>
+                   <option value="供应商">供应商</option>
+                   <option value="生产厂家">生产厂家</option>
+               </select>
+               <span class="userRoleSpanY hide"><img src="../images/register/registerY.png">请选择用户角色</span>
+           </div>
+           <div>
+               <label><font size="3" color="red">*</font>性别：</label>
+               <select class="gender yesInput" onfocus="checkGenderRole()" onblur="checkGenderRole1()">
+                   <option value="">---请选择---</option>
+                   <option value="男">男</option>
+                   <option value="女">女</option>
+               </select>
+               <span class="genderSpanY hide"><img src="../images/register/registerY.png">请选择性别</span>
+           </div>
+           <div class="ipr_button">
+               <div class="iprButton">
+                   <a class="iprSave" href="javascript:;" onclick="formSubmit()">保存</a>
+                   <a class="iprReset" href="javascript:;" onclick="formReset()">取消</a>
+               </div>
+           </div>
+       </div>
+       </form>
+    </div>
+    <script type="text/javascript" src="../js/inforPerRight.js"></script>
+</body>
+</html>
