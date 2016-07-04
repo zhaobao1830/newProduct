@@ -9,7 +9,6 @@ html,body{
     height:99%;
     margin:0px;
     background-color: #dae6ef;
-    overflow-y : hidden;
 }
 
 em{
@@ -24,9 +23,11 @@ a:hover{text-decoration: none;}
 img{border: none;margin: 0px;padding: 0px;}
 
 .ipr{
+    width: 100%;
     margin-top: 18px;
     background-color: white;
     border: 1px solid white;
+    float: left;
 }
 .personInformation,.enterInformation{
     width: 100%;

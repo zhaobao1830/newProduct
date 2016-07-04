@@ -1,9 +1,6 @@
 /**
  * Created by Administrator on 2016/7/3.
  */
-$(function(){
-    //$(".ipr").height(500)
-})
 
 
 /*登录用户名获取焦点*/

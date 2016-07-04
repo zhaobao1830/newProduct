@@ -5,9 +5,12 @@
     <title>信息完善</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="../js/inforPer.js"></script>
+    <script type="text/javascript" src="../js/inforPerRight.js"></script>
+    <script type="text/javascript" src="../js/WdatePicker.js"></script>
     <link rel="stylesheet" href="../css/inforPer.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/inforPerRight.css">
 </head>
 <body>
 <div class="head">
@@ -53,9 +56,136 @@
             <img class="ifp_logo" src="../images/inforPerRight/ifp_logo.png"><p>当前位置：用户管理></p><p class="ei_rt show">个人信息</p><p class="pi_rt hide">所属企业信息</p>
         </div>
 
-        <iframe name="mainFrame" id="mainFrame"  src="iprPerson.html">
 
-        </iframe>
+        <div class="ipr">
+            <div class="ei_inf enterInformation show">
+                <div class="ei_inf personInformation show">
+                    <form action="" name="userForm" id="userForm" method="post">
+                        <div>
+                            <label><font size="3" color="red">*</font>登录用户名：</label>
+                            <input type="text" class="loginUserName yesInput" id="loginUserName" name="loginUserName" value="" onfocus="checkLoginUsername()" onblur="checkLoginUsername1()">
+                            <span class="loginUserNameSpanY hide"><img src="../images/inforPerRight/ifpY.png">6-20个字符，包含字数、数字或符号</span>
+                            <span class="loginUserNameSpanN hide"><img src="../images/inforPerRight/ifpN.png">用户名格式不正确</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>登录密码：</label>
+                            <input type="password" class="password yesInput" id="password" name="password" value="" onfocus="checkPassword()" onblur="checkPassword1()">
+                            <span class="passwordSpanN hide"><img src="../images/inforPerRight/ifpY.png">请输入登录密码</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>确认密码：</label>
+                            <input type="password" class="repassword yesInput" id="repassword" name="repassword" value="" onfocus="checkRepassword()" onblur="checkRepassword1()">
+                            <span class="repasswordSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入确认密码</span>
+                            <span class="repasswordSpanN hide"><img src="../images/inforPerRight/ifpN.png">俩次密码不一致</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>用户名：</label>
+                            <input type="text" class="userName yesInput" id="userName" name="userName" value="" onfocus="checkUserName()" onblur="checkUserName1()">
+                            <span class="userNamepanN hide"><img src="../images/inforPerRight/ifpY.png">请输入用户名</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>手机：</label>
+                            <input type="tel" class="phone yesInput" id="phone" name="phone" value="" onfocus="checkPhone()" onblur="checkPhone1()">
+                            <span class="phoneSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入手机</span>
+                            <span class="phoneSpanN hide"><img src="../images/inforPerRight/ifpN.png">手机格式不正确</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>邮箱：</label>
+                            <input type="email" class="email yesInput" id="email" name="email" value="" onfocus="checkEmail()" onblur="checkEmail1()">
+                            <span class="emailSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入邮箱</span>
+                            <span class="emailSpanN hide"><img src="../images/inforPerRight/ifpN.png">邮箱格式不正确</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>用户角色：</label>
+                            <select class="userRole yesInput" onfocus="checkUserRole()" onblur="checkUserRole1()">
+                                <option value="">---请选择---</option>
+                                <option value="供应商">供应商</option>
+                                <option value="生产厂家">生产厂家</option>
+                            </select>
+                            <span class="userRoleSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择用户角色</span>
+                        </div>
+                        <div>
+                            <label><font size="3" color="red">*</font>性别：</label>
+                            <select class="gender yesInput" onfocus="checkGenderRole()" onblur="checkGenderRole1()">
+                                <option value="">---请选择---</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                            <span class="genderSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择性别</span>
+                        </div>
+                        <div class="ipr_button">
+                            <div class="iprButton">
+                                <a class="iprSave" href="javascript:;" onclick="personFormSubmit()">保存</a>
+                                <a class="iprReset" href="javascript:;" onclick="personFormReset()">取消</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="pi_inf enterInformation hide">
+                <form action="" name="userForm" id="entersForm" method="post">
+                    <div>
+                        <label><font size="3" color="red">*</font>是否已录入：</label>
+                        <select class="ifEnter yesInput" onfocus="checkIfEnter()" onblur="checkIfEnter1()">
+                            <option value="">---请选择---</option>
+                            <option value="0">信息未录入</option>
+                            <option value="1">信息已录入</option>
+                        </select>
+                        <span class="ifEnterSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择是否录入</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>商家编码：</label>
+                        <input type="text" class="mercode yesInput" value="" onfocus="checkMercode()" onblur="checkMercode1()">
+                        <span class="mercodeSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入商家编码</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>组织机构代码：</label>
+                        <input type="text" class="orgcode yesInput" value="" onfocus="checkorgcode()" onblur="checkorgcode1()">
+                        <span class="orgcodeSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入组织机构代码</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>公司名称：</label>
+                        <input type="text" class="companyName yesInput" value="" onfocus="checkCompanyName()" onblur="checkCompanyName1()">
+                        <span class="companyNameSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入公司名称</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>注册日期：</label>
+                        <input  name="createCode_date" class="regisDate yesInput" type="text" onFocus="var endDate=$dp.$('endDate2');WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});$('.regisDateSpanY').removeClass('hide').addClass('show')" value=""  onblur="checkRegisDate1()"/>
+                        <span class="regisDateSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择注册日期</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>注册资金：</label>
+                        <input type="text" class="regisCapital yesInput" value="" onfocus="checkRegisCapital()" onblur="checkRegisCapital1()">
+                        <span class="regisCapitalSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入注册资金</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>联系人：</label>
+                        <input type="text" class="contacts yesInput" value="" onfocus="checkContacts()" onblur="checkContacts1()">
+                        <span class="contactsSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入联系人</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>联系电话：</label>
+                        <input type="text" class="contactNumber yesInput" value="" onfocus="checkContactNumber()" onblur="checkContactNumber1()">
+                        <span class="contactNumberSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入联系电话</span>
+                        <span class="contactNumberSpanN hide"><img src="../images/inforPerRight/ifpN.png">电话格式不正确</span>
+                    </div>
+                    <div>
+                        <label><font size="3" color="red">*</font>公司地址：</label>
+                        <input type="text" class="comAddress yesInput" value="" onfocus="checkComAddress()" onblur="checkComAddress1()">
+                        <span class="comAddressSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入公司地址</span>
+                    </div>
+                    <div class="ipr_button">
+                        <div class="iprButton">
+                            <a class="iprSave" href="javascript:;" onclick="enterFormSubmit()">保存</a>
+                            <a class="iprReset" href="javascript:;" onclick="enterFormReset()">取消</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--<iframe name="mainFrame" id="mainFrame"  src="iprPerson.html">-->
+
+        <!--</iframe>-->
     </div>
 </div>
 <div class="register_bottom">
