@@ -2,8 +2,7 @@
  * Created by Administrator on 2016/7/3.
  */
 $(function(){
-    alert($(".inforPer_right").height())
-    $(".ipr").height(580)
+    //$(".ipr").height(500)
 })
 
 
@@ -196,10 +195,8 @@ function checkGenderRole1(){
 
 
 
-/*表单提交
- * 如果registerButton有registerNoButton，无法提交
- * */
-function formSubmit(){
+/*个人信息表单提交* */
+function personFormSubmit(){
     var flag=true
     //判断登录用户名
     flag=checkLoginUsername1()
@@ -264,8 +261,244 @@ function formSubmit(){
     }
 }
 
-/*取消*/
-function formReset(){
+/*个人表单取消*/
+function personFormReset(){
     $("#userForm")[0].reset()
 }
 
+/*所属企业信息*/
+
+//是否已录入获取焦点
+function checkIfEnter(){
+    $(".ifEnter").removeClass("errorInput").addClass("yesInput")
+    $(".ifEnterSpanY").removeClass("hide").addClass("show")
+}
+
+//是否已录入失去焦点
+function checkIfEnter1(){
+    var ifEnterValue
+    ifEnterValue=$(".ifEnter option:selected").val()
+    $(".ifEnterSpanY").removeClass("show").addClass("hide")
+    if(ifEnterValue){
+        return true
+    }else{
+        return false
+    }
+}
+
+/*商家编码获取焦点*/
+function checkMercode(){
+    $(".mercode").val("")
+    $(".mercodeSpanY").removeClass("hide").addClass("show")
+}
+/*商家编码失去焦点*/
+function checkMercode1(){
+    $(".mercodeSpanY").removeClass("show").addClass("hide")
+    var mercodeVal
+    mercodeVal=$(".mercode").val()
+    if(mercodeVal){
+        return true
+    }else{
+        return false
+    }
+}
+/*组织机构代码获取焦点*/
+function checkorgcode(){
+    $(".orgcode").val("")
+    $(".orgcodeSpanY").removeClass("hide").addClass("show")
+}
+/*组织机构代码失去焦点*/
+function checkorgcode1(){
+    $(".orgcodeSpanY").removeClass("show").addClass("hide")
+    var orgcodeVal
+    orgcodeVal=$(".orgcode").val()
+    if(orgcodeVal){
+        return true
+    }else{
+        return false
+    }
+}
+/*公司名称获取焦点*/
+function checkCompanyName(){
+    $(".companyName").val("")
+    $(".companyNameSpanY").removeClass("hide").addClass("show")
+}
+/*公司名称失去焦点*/
+function checkCompanyName1(){
+    $(".companyNameSpanY").removeClass("show").addClass("hide")
+    var companyNameVal
+    companyNameVal=$(".companyName").val()
+    if(companyNameVal){
+        return true
+    }else{
+        return false
+    }
+}
+
+/*注册日期失去焦点*/
+function checkRegisDate1(){
+    $(".regisDateSpanY").removeClass("show").addClass("hide")
+    var regisDateVal
+    regisDateVal=$(".regisDate").val()
+    if(regisDateVal){
+        return true
+    }else{
+        return false
+    }
+}
+
+/*注册资金获取焦点*/
+function checkRegisCapital(){
+    $(".regisCapital").val("")
+    $(".regisCapitalSpanY").removeClass("hide").addClass("show")
+}
+/*注册资金失去焦点*/
+function checkRegisCapital1(){
+    $(".regisCapitalSpanY").removeClass("show").addClass("hide")
+    var regisCapitalVal
+    regisCapitalVal=$(".regisCapital").val()
+    if(regisCapitalVal){
+        return true
+    }else{
+        return false
+    }
+}
+
+/*联系人获取焦点*/
+function checkContacts(){
+    $(".contacts").val("")
+    $(".contactsSpanY").removeClass("hide").addClass("show")
+}
+/*联系人失去焦点*/
+function checkContacts1(){
+    $(".contactsSpanY").removeClass("show").addClass("hide")
+    var contactsVal
+    contactsVal=$(".contacts").val()
+    if(contactsVal){
+        return true
+    }else{
+        return false
+    }
+}
+
+/*联系电话获取焦点*/
+function checkContactNumber(){
+    $(".contactNumber").val("")
+    $(".contactNumber").removeClass("errorInput").addClass("yesInput")
+    $(".contactNumberSpanY").removeClass("hide").addClass("show")
+    $(".contactNumberSpanN").removeClass("show").addClass("hide")
+}
+/*联系电话失去焦点*/
+function checkContactNumber1(){
+    $(".contactNumberSpanY").removeClass("show").addClass("hide")
+    var contactNumberValue
+    contactNumberValue=$(".contactNumber").val()
+    if(contactNumberValue){
+        if(!(/^1[3|4|5|7|8]\d{9}$/.test(contactNumberValue))) {
+            $(".contactNumberSpanN").removeClass("hide").addClass("show")
+            $(".contactNumber").removeClass("yesInput").addClass("errorInput")
+            return false
+        }else{
+            $(".contactNumberSpanN").removeClass("show").addClass("hide")
+            return true
+        }
+        return true
+    }else{
+        return false
+    }
+}
+
+/*公司地址获取焦点*/
+function checkComAddress(){
+    $(".comAddress").val("")
+    $(".comAddressSpanY").removeClass("hide").addClass("show")
+}
+/*公司地址失去焦点*/
+function checkComAddress1(){
+    $(".comAddressSpanY").removeClass("show").addClass("hide")
+    var comAddressVal
+    comAddressVal=$(".comAddress").val()
+    if(comAddressVal){
+        return true
+    }else{
+        return false
+    }
+}
+
+
+/*所属企业表单提交*/
+function enterFormSubmit(){
+    //判断是否已录入
+    var flag=true
+    //判断登录用户名
+    flag=checkIfEnter1()
+    if(flag==false){
+        $(".ifEnter").focus()
+    }
+    //判断商家编码
+    if(flag){
+        flag=checkMercode1()
+        if(flag==false){
+            $(".mercode").focus()
+        }
+    }
+    //判断组织机构代码
+    if(flag){
+        flag=checkorgcode1()
+        if(flag==false){
+            $(".orgcode").focus()
+        }
+    }
+    //判断公司名称
+    if(flag){
+        flag=checkCompanyName1()
+        if(flag==false){
+            $(".companyName").focus()
+        }
+    }
+    //判断注册时间
+    if(flag){
+        flag=checkRegisDate1()
+        if(flag==false){
+            //$(".regisDate").focus()
+            $('.regisDateSpanY').removeClass('hide').addClass('show')
+        }
+    }
+    //判断注册资金
+    if(flag){
+        flag=checkRegisCapital1()
+        if(flag==false){
+            $(".regisCapital").focus()
+        }
+    }
+
+    //判断联系人
+    if(flag){
+        flag=checkContacts1()
+        if(flag==false){
+            $(".contacts").focus()
+        }
+    }
+   //判断联系电话
+    if(flag){
+        flag=checkContactNumber1()
+        if(flag==false){
+            $(".contactNumber").focus()
+        }
+    }
+   //判断公司地址
+    if(flag){
+        flag=checkComAddress1()
+        if(flag==false){
+            $(".comAddress").focus()
+        }
+    }
+    if(flag){
+        $("#enterForm")[0].submit()
+    }
+}
+
+/*所属企业表单取消*/
+function enterFormReset(){
+    $("#enterForm")[0].reset()
+}

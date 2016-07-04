@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>完善页面--所属企业信息</title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/inforPerRight.js"></script>
+    <script type="text/javascript" src="../js/WdatePicker.js"></script>
+    <link rel="stylesheet" href="../css/inforPerRight.css">
+</head>
+<body>
+<div class="ipr">
+    <div class="pi_inf enterInformation">
+        <form action="" name="userForm" id="enterForm" method="post">
+            <div>
+                <label><font size="3" color="red">*</font>是否已录入：</label>
+                <select class="ifEnter yesInput" onfocus="checkIfEnter()" onblur="checkIfEnter1()">
+                    <option value="">---请选择---</option>
+                    <option value="0">信息未录入</option>
+                    <option value="1">信息已录入</option>
+                </select>
+                <span class="ifEnterSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择是否录入</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>商家编码：</label>
+                <input type="text" class="mercode yesInput" value="" onfocus="checkMercode()" onblur="checkMercode1()">
+                <span class="mercodeSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入商家编码</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>组织机构代码：</label>
+                <input type="text" class="orgcode yesInput" value="" onfocus="checkorgcode()" onblur="checkorgcode1()">
+                <span class="orgcodeSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入组织机构代码</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>公司名称：</label>
+                <input type="text" class="companyName yesInput" value="" onfocus="checkCompanyName()" onblur="checkCompanyName1()">
+                <span class="companyNameSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入公司名称</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>注册日期：</label>
+                <input  name="createCode_date" class="regisDate yesInput" type="text" onFocus="var endDate=$dp.$('endDate2');WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});$('.regisDateSpanY').removeClass('hide').addClass('show')" value=""  onblur="checkRegisDate1()"/>
+                <span class="regisDateSpanY hide"><img src="../images/inforPerRight/ifpY.png">请选择注册日期</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>注册资金：</label>
+                <input type="text" class="regisCapital yesInput" value="" onfocus="checkRegisCapital()" onblur="checkRegisCapital1()">
+                <span class="regisCapitalSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入注册资金</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>联系人：</label>
+                <input type="text" class="contacts yesInput" value="" onfocus="checkContacts()" onblur="checkContacts1()">
+                <span class="contactsSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入联系人</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>联系电话：</label>
+                <input type="text" class="contactNumber yesInput" value="" onfocus="checkContactNumber()" onblur="checkContactNumber1()">
+                <span class="contactNumberSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入联系电话</span>
+                <span class="contactNumberSpanN hide"><img src="../images/inforPerRight/ifpN.png">电话格式不正确</span>
+            </div>
+            <div>
+                <label><font size="3" color="red">*</font>公司地址：</label>
+                <input type="text" class="comAddress yesInput" value="" onfocus="checkComAddress()" onblur="checkComAddress1()">
+                <span class="comAddressSpanY hide"><img src="../images/inforPerRight/ifpY.png">请输入公司地址</span>
+            </div>
+            <div class="ipr_button">
+                <div class="iprButton">
+                    <a class="iprSave" href="javascript:;" onclick="enterFormSubmit()">保存</a>
+                    <a class="iprReset" href="javascript:;" onclick="enterFormReset()">取消</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

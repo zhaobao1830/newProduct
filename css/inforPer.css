@@ -6,7 +6,7 @@
     font-family: 'Arial','Microsoft Yahei',Tahoma,'Simsun';
 }
 html,body{
-    height:99%;
+    /*height:99%;*/
     margin:0px;
 }
 em{
@@ -35,16 +35,23 @@ img{border: none;margin: 0px;padding: 0px;}
 
 #realTime{
     height: 50px;
-    line-height: 50px;
-    color: #464646;
     background-color: #e8e7e7;
-    font-size: 18px;
     border-bottom: 1px solid #c9d5df ;
 }
-#realTime img,.contractOrder img{
+
+#realTime img{
     padding-left: 50px;
     padding-right: 10px;
-    margin-top:-8px;
+    display: block;
+    float: left;
+    margin-top: 12px;
+}
+#realTime p{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #464646;
 }
 .inforPer_left ul {
     background-color: #fafafa;
@@ -91,13 +98,18 @@ img{border: none;margin: 0px;padding: 0px;}
 }
 
 #mainFrame{
-    margin: 0px auto 0px;
+    margin: 0px auto 60px;
     width: 100%;
     border: none;
 }
 .inforPer_right_tittle{
     width: 700px;
-padding-top: 20px;
+    float: left;
+    padding-top: 18px;
+}
+.ifp_logo{
+    float: left;
+    padding-right: 10px;
 }
 .inforPer_right_tittle p{
     font-size: 12px;
@@ -113,4 +125,11 @@ padding-top: 20px;
 }
 .liNoClick{
     color: #464646;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }

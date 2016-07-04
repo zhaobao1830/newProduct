@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>信息完善</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/inforPer.js"></script>
     <link rel="stylesheet" href="../css/inforPer.css">
     <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/foot.css">
 </head>
 <body>
 <div class="head">
@@ -38,10 +38,10 @@
 </div>
 <div class="inforPerContain">
     <div class="inforPer_left">
-        <div id="realTime"><img src="../images/left/left_1.png">用户管理</div>
+        <div id="realTime"><img src="../images/left/left_1.png"><p>用户管理</p></div>
         <ul>
-            <li class="ei realTimeLi liNoClick">
-                <div class="ei_div infor_NoClick realTimeDiv"><img src="../images/inforPer/ei_n.png">个人信息</div>
+            <li class="ei realTimeLi liClick">
+                <div class="ei_div infor_Click realTimeDiv"><img src="../images/inforPer/ei_y.png">个人信息</div>
             </li>
             <li class="pi realTimeLi liNoClick">
                 <div class="pi_div infor_NoClick realTimeDiv"><img src="../images/inforPer/pi_n.png">所属企业信息</div>
@@ -50,13 +50,16 @@
     </div>
     <div class="inforPer_right" id="inforPer_right">
         <div class="inforPer_right_tittle">
-            <p>当前位置：用户管理></p><p class="ifp_rt">所属企业信息</p>
+            <img class="ifp_logo" src="../images/inforPerRight/ifp_logo.png"><p>当前位置：用户管理></p><p class="ei_rt show">个人信息</p><p class="pi_rt hide">所属企业信息</p>
         </div>
 
-        <iframe name="mainFrame" id="mainFrame"  src="inforPerRight.html">
+        <iframe name="mainFrame" id="mainFrame"  src="iprPerson.html">
 
-      </iframe>
+        </iframe>
     </div>
+</div>
+<div class="register_bottom">
+    铁路产品质量管理系统
 </div>
 </body>
 </html>

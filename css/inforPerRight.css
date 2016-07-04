@@ -8,7 +8,10 @@
 html,body{
     height:99%;
     margin:0px;
+    background-color: #dae6ef;
+    overflow-y : hidden;
 }
+
 em{
     font-style: normal;
 }
@@ -20,63 +23,69 @@ a{text-decoration: none;}
 a:hover{text-decoration: none;}
 img{border: none;margin: 0px;padding: 0px;}
 
-.personInformation{
+.ipr{
+    margin-top: 18px;
+    background-color: white;
+    border: 1px solid white;
+}
+.personInformation,.enterInformation{
     width: 100%;
     min-width: 700px;
+    margin-top: 40px;
 }
 
-.personInformation div{
+.personInformation div,.enterInformation div{
     width: 100%;
-    height: 40px;
+    height: 32px;
     margin-top: 20px;
 }
-.personInformation label{
+.personInformation label,.enterInformation label{
     width: 120px;
     text-align: right;
     float: left;
-    height: 40px;
-    line-height: 40px;
+    height: 32px;
+    line-height: 32px;
     font-size: 14px;
     color: #464646;
 }
-.personInformation input{
-    width: 300px;
+.personInformation input,.enterInformation input{
+    width: 298px;
     float: left;
     margin-left: 10px;
-    height: 38px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 32px;
     margin-bottom: 0px;
     border-width: 1px;
     border-style: solid;
 }
-.personInformation select{
+.personInformation select,.enterInformation select{
     width: 300px;
     float: left;
     margin-left: 10px;
-    height: 35px;
-    line-height: 35px;
+    height: 32px;
+    line-height: 32px;
     margin-bottom: 0px;
     color: #464646;
 }
-.personInformation span{
+.personInformation span,.enterInformation span{
     width: auto;
     float: left;
     margin-left: 10px;
     font-size: 14px;
-    height: 40px;
-    line-height: 40px;
+    height: 32px;
+    line-height: 32px;
     color: #777777;
 }
-.personInformation span img{
+.personInformation span img,.enterInformation span img{
     display: block;
     padding-right: 5px;
-    margin-top: 7px;
+    margin-top: 5px;
     float: left;
 }
 .ipr_button{
     width: 700px;
     height: 36px;
-    margin: 0px auto;
+    margin: 30px auto 0px !important;
 }
 .iprSave,.iprReset{
     width: 84px;
