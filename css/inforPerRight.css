@@ -24,14 +24,16 @@ img{border: none;margin: 0px;padding: 0px;}
 
 .ipr{
     width: 100%;
+    min-width: 720px;
     margin-top: 18px;
     background-color: white;
-    border: 1px solid white;
+    border: 1px solid #77afea;
     float: left;
+    border-radius: 4px;
 }
 .personInformation,.enterInformation{
     width: 100%;
-    min-width: 700px;
+   min-width: 720px;
     margin-top: 40px;
 }
 
@@ -41,32 +43,34 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-top: 20px;
 }
 .personInformation label,.enterInformation label{
-    width: 120px;
+    width: 140px;
     text-align: right;
     float: left;
     height: 32px;
     line-height: 32px;
     font-size: 14px;
-    color: #464646;
+    color: #777777;
 }
 .personInformation input,.enterInformation input{
-    width: 298px;
+    width: 293px;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     height: 30px;
     line-height: 32px;
     margin-bottom: 0px;
     border-width: 1px;
     border-style: solid;
+    border-radius: 2px;
+    padding-left: 5px;
 }
 .personInformation select,.enterInformation select{
     width: 300px;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     height: 32px;
     line-height: 32px;
     margin-bottom: 0px;
-    color: #464646;
+    /*color: #777777;*/
 }
 .personInformation span,.enterInformation span{
     width: auto;
@@ -83,10 +87,15 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-top: 5px;
     float: left;
 }
-.ipr_button{
-    width: 700px;
+#ipr_butt,#ipr_button{
+    width: 100%;
+    min-width: 700px;
     height: 36px;
     margin: 30px auto 0px !important;
+}
+#iprButt,#iprButton{
+    width: 100%;
+    height: 36px;
 }
 .iprSave,.iprReset{
     width: 84px;
@@ -101,7 +110,7 @@ img{border: none;margin: 0px;padding: 0px;}
 .iprSave{
     color: white;
     background: url("../images/inforPerRight/ifp_1.png") no-repeat;
-    margin-left: 129px;
+    margin-left: 145px;
 }
 .iprReset{
     background: url("../images/inforPerRight/ifp_2.png") no-repeat;

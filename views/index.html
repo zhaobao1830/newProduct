@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>一级页面</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="../js/head.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../css/bootstrap.min.css">-->
     <link rel="stylesheet" href="../css/head.css">
-    <link rel="stylesheet" href="../css/left.css">
+    <link rel="stylesheet" href="../css/index_left.css">
+    <link rel="stylesheet" href="../css/index_right.css">
 </head>
 <body>
     <div class="head">
@@ -41,67 +42,161 @@
     <div class="container-fluid" id="main-container">
         <!--左侧列表-->
        <div class="sidebar">
-           <div id="realTime"><img src="../images/left/left_1.png"><p>实时报表</p></div>
+           <div id="realTime"><img src="../images/index_left/left_1.png"><p>实时报表</p></div>
            <ul>
-               <li class="realTimeLi">
-                  <div class="ct ulNoClick realTimeDiv"><img src="../images/left/ct_n.png">合同订单管理</div>
+               <li class="realTimeLi realTimeLiTit">
+                  <div class="ct ulNoClick realTimeDiv"><img src="../images/index_left/ct_n.png">合同订单管理</div>
                   <ul  class="ct_ul hide">
-                      <li class="liClick"><img src="../images/left/left_6.png">合同信息维护</li>
-                      <li class="liNoClick"><img src="../images/left/left_5.png">合同信息查询</li>
-                      <li class="liNoClick"><img src="../images/left/left_5.png">订单信息维护</li>
-                      <li class="liNoClick"><img src="../images/left/left_5.png">订单信息查询</li>
+                      <li class="liClick"><img src="../images/index_left/left_6.png">合同信息维护</li>
+                      <li class="liNoClick"><img src="../images/index_left/left_5.png">合同信息查询</li>
+                      <li class="liNoClick"><img src="../images/index_left/left_5.png">订单信息维护</li>
+                      <li class="liNoClick"><img src="../images/index_left/left_5.png">订单信息查询</li>
                   </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="cm ulNoClick realTimeDiv"><img src="../images/left/cm_n.png">编码管理</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="cm ulNoClick realTimeDiv"><img src="../images/index_left/cm_n.png">编码管理</div>
                    <ul  class="cm_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">序列号生成</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">序列号打印</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">序列号查询</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">序列号生成</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">序列号打印</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">序列号查询</li>
                    </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="sm ulNoClick realTimeDiv"><img src="../images/left/sm_n.png">供货计划管理</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="sm ulNoClick realTimeDiv"><img src="../images/index_left/sm_n.png">供货计划管理</div>
                    <ul  class="sm_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">发货单维护</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">发货单查询</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">发货单维护</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">发货单查询</li>
                    </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="is ulNoClick realTimeDiv"><img src="../images/left/is_n.png">信息查询</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="is ulNoClick realTimeDiv"><img src="../images/index_left/is_n.png">信息查询</div>
                    <ul  class="is_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">产品查询</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">标准查询</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">资质查询</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">市场价格查询</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">招标采购查询</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">产品查询</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">标准查询</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">资质查询</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">市场价格查询</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">招标采购查询</li>
                    </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="bis ulNoClick realTimeDiv"><img src="../images/left/bis_n.png">基础信息管理</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="bis ulNoClick realTimeDiv"><img src="../images/index_left/bis_n.png">基础信息管理</div>
                    <ul  class="bis_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">供应商管理</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">生产厂商管理</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">物资档案管理</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">供应商管理</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">生产厂商管理</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">物资档案管理</li>
                    </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="qsi ulNoClick realTimeDiv"><img src="../images/left/qsi_n.png">质量抽查监督信息</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="qsi ulNoClick realTimeDiv"><img src="../images/index_left/qsi_n.png">质量抽查监督信息</div>
                    <ul  class="qsi_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">质量监督信息维护</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">质量监督信息查询</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">质量监督信息维护</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">质量监督信息查询</li>
                    </ul>
                </li>
-               <li class="realTimeLi">
-                   <div class="sym ulNoClick realTimeDiv"><img src="../images/left/sym_n.png">系统管理</div>
+               <li class="realTimeLi realTimeLiTit">
+                   <div class="sym ulNoClick realTimeDiv"><img src="../images/index_left/sym_n.png">系统管理</div>
                    <ul  class="sym_ul hide">
-                       <li class="liClick"><img src="../images/left/left_6.png">组织管理</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">系统用户</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">用户审核</li>
-                       <li class="liNoClick"><img src="../images/left/left_5.png">企业审核</li>
+                       <li class="liClick"><img src="../images/index_left/left_6.png">组织管理</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">系统用户</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">用户审核</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">企业审核</li>
                    </ul>
                </li>
            </ul>
+       </div>
+        <!--一级页面右半部分-->
+       <div class="index_right">
+          <div class="index_right_title">
+              <img class="ifp_logo" src="../images/inforPerRight/ifp_logo.png">
+              <p>当前位置：</p>
+              <p class="title_head">信息管理</p>
+              <p>></p>
+              <p class="title_Li">合同订单管理</p>
+              <p>></p>
+              <p class="title_li">合同信息维护</p>
+          </div>
+          <div class="index_right_content">
+             <div class="right_content_top">
+                 <div class="rct_left">
+                     <div>
+                         <a href="#">
+                             <img src="../images/index_right/add.png">
+                             <p>添加</p>
+                         </a>
+                     </div>
+                     <div>
+                         <a href="#">
+                             <img src="../images/index_right/delete.png">
+                             <p>删除</p>
+                         </a>
+                     </div>
+                     <div>
+                         <a href="#">
+                             <img src="../images/index_right/import.png">
+                             <p>导出</p>
+                         </a>
+                     </div>
+                     <div>
+                         <a href="#">
+                             <img src="../images/index_right/export.png">
+                             <p>导入</p>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="ret_right">
+                     <div>
+                         <select>
+                             <option>请选择供应商</option>
+                         </select>
+                     </div>
+                     <div>
+                         <select>
+                             <option>请选择审定状态</option>
+                         </select>
+                     </div>
+                     <div>
+                         <input class="ret_search" type="text" value=""><a href="#" class="ret_search_a">搜索</a>
+                     </div>
+                     <div class="ret_senSearch_div">
+                         <a class="ret_senSearch_a" href="#">高级搜索</a>
+                     </div>
+                 </div>
+             </div>
+             <div class="right_content_content">
+               <table>
+                   <thead>
+                      <tr>
+                          <td width="54"><img src="../images/index_right/noSelect.png"></td>
+                          <td width="70">序号</td>
+                          <td>合同编号</td>
+                          <td>合同名称</td>
+                          <td>供应商</td>
+                          <td>采购单位</td>
+                          <td>签订时间</td>
+                          <td>合同状态</td>
+                          <td>审定状态</td>
+                          <td>创建时间</td>
+                          <td width="68">操作</td>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr>
+                          <td><img src="../images/index_right/yesSelect.png"></td>
+                          <td>1</td>
+                          <td>1ZZTLJ-2016-031</td>
+                          <td>直流传动机车采购合同</td>
+                          <td>中车大连机车车辆有限公司</td>
+                          <td>郑州铁路局</td>
+                          <td>2016-02-09</td>
+                          <td>审核通过</td>
+                          <td></td>
+                          <td>2016-05-25</td>
+                          <td>修改</td>
+                      </tr>
+                   </tbody>
+               </table>
+             </div>
+          </div>
        </div>
     </div>
 </body>

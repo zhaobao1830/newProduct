@@ -81,7 +81,7 @@ img{border: none;margin: 0px;padding: 0px;}
     color: #464646;
 }
 .accountInformation input,.contactsInformation input{
-    width: 298px;
+    width: 293px;
     float: left;
     margin-left: 10px;
     height: 38px;
@@ -89,6 +89,7 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-bottom: 0px;
     border-width: 1px;
     border-style: solid;
+    padding-left: 5px;
 }
 .contactsInformation select{
     width: 300px;

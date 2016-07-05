@@ -8,19 +8,7 @@ $(function(){
     $(".head_userMana").css("background-position","-328px -82px")
     $(".head_userMana").addClass("clickLi")
 
-    setHeight("pi_inf")
-    /*确定mainFrame，inforPer_left,inforPer_right的高度*/
-    //var bodyHeight //页面的完整高度
-    //bodyHeight=getViewSizeWithScrollbar().height
-    //$(".inforPerContain").height(bodyHeight-100)
-    //$("#mainFrame").height(bodyHeight-150);
-    //$(".inforPer_left").height(bodyHeight-100)
-    //$(".inforPer_right").height(bodyHeight-100)
-
-    //$(".inforPerContain").height(710)
-    //$(".inforPer_left").height(710)
-    //$(".inforPer_right").height(710)
-    //$(".ipr").height(596)
+    setHeight("ei_inf")
 
     /*给左边的Li绑定click事件*/
     var fc //获取最左边的class值
@@ -50,19 +38,7 @@ $(function(){
         $(".ei_inf").removeClass("show").addClass("hide")
         $(".pi_inf").removeClass("show").addClass("hide")
         $("."+fc+"_inf").removeClass("hide").addClass("show")
-
-        setHeight("."+fc+"_inf")
-        ///*
-        //* $(".inforPer_right")里面的包含一个iframe
-        //* iframe的src是动态改变的
-        //* 当点击个人信息的时候，iframe的src为iprPerson.html
-        //* 当点击所属企业信息的时候，iframe的src为iprEnterprise.html
-        //* */
-        //if($(".ei_rt").hasClass("show")){
-        //    $("#mainFrame").attr("src","iprPerson.html")
-        //}else{
-        //    $("#mainFrame").attr("src","iprEnterprise.html")
-        //}
+        setHeight(fc+"_inf")
     })
 })
 

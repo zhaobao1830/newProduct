@@ -5,6 +5,11 @@
     font-size: 12px;
     font-family:'Microsoft Yahei','Arial',Tahoma,'Simsun';
 }
+html,body{
+    height:99%;
+    margin:0px;
+    background-color: #dae6ef;
+}
 em{
     font-style: normal;
 }
@@ -20,13 +25,14 @@ ul,ol,p{
 }
 #main-container{
     padding: 0px;
-    /*background-color: #eeeeee;*/
-    height: 100%;
-    position: fixed;
 }
 .sidebar{
     width: 240px;
+    height: auto;
+    min-height: 600px;
     border-right: 1px solid #77afea;
+    background-color: #eeeeee;
+    position: absolute;
 }
 
 #realTime{
@@ -59,12 +65,17 @@ ul,ol,p{
 }
 
 .realTimeDiv{
+    line-height: 46px;
     font-size: 16px;
-    background-position: 200px 10px;
+    background-position: 200px 13px;
     background-repeat: no-repeat;
     cursor: pointer;
     padding-left: 20px;
 }
+.realTimeLiTit{
+    line-height: 46px !important;
+}
+
 .realTimeLi img{
     padding-right: 10px;
 }
@@ -83,17 +94,17 @@ ul,ol,p{
 }
 /*左边ul title的俩个css*/
 .ulClick{
-    background-image: url("../images/left/left_4.png");
+    background-image: url("../images/index_left/left_4.png");
     color: #4ea0ea;
 }
 .ulNoClick{
-    background-image: url("../images/left/left_3.png");
+    background-image: url("../images/index_left/left_3.png");
     color: #222222;
 }
 /*左边li的俩个css*/
 .liClick{
-    background-image: url("../images/left/left_7.png");
-    background-position: 232px 0px;
+    background-image: url("../images/index_left/left_7.png");
+    background-position: 231px 0px;
     color: #4ea0ea;
 }
 .liNoClick{
