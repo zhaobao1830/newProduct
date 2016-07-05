@@ -1,0 +1,112 @@
+*{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    font-size: 12px;
+    font-family:'Microsoft Yahei','Arial',Tahoma,'Simsun';
+}
+html,body{
+    height:99%;
+    margin:0px;
+    background-color: #dae6ef;
+}
+em{
+    font-style: normal;
+}
+strong{
+    font-weight: normal;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+img{border: none;margin: 0px;padding: 0px;}
+ul,ol,p{
+    margin: 0px;
+}
+
+.nor{
+    width: 840px;
+    height: 668px;
+    margin: 100px auto;
+    background-color: white;
+}
+
+.nor_title{
+    width: 840px;
+    height: 32px;
+    line-height: 32px;
+    background:url("../images/newOrderInformation/titleLogo.png") no-repeat;
+}
+.nor_title p{
+    color: white;
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.nor_title a{
+    display: block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.nor_content{
+    width: 840px;
+    float: left;
+    margin-top: 30px;
+}
+.nor_content div{
+    width: 400px;
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 20px;
+}
+.contentDiv{
+    margin-top: 0 !important;
+}
+.nor_content label{
+    width: 130px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    text-align: right;
+    color: #777777;
+}
+.nor_content input{
+    width: 263px;
+    height: 30px;
+    line-height: 32px;
+    border: 1px solid #dddddd;
+    float: left;
+    padding-left: 5px;
+}
+
+.formButton{
+    width: 840px;
+    height: 32px;
+    float: left;
+    margin-top: 30px;
+}
+.formButton a{
+    width: 80px;
+    height: 32px;
+    display: block;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+}
+
+.saveForm{
+    background: url("../images/newOrderInformation/saveForm.png") no-repeat;
+    color: white;
+    margin-left: 330px;
+}
+.resetForm{
+    background: url("../images/newOrderInformation/resertForm.png") no-repeat;
+    color: #464646;
+    margin-left: 20px;
+}

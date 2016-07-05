@@ -18,21 +18,21 @@ strong{
 }
 li{list-style: none;}
 a{text-decoration: none;}
-a:hover{text-decoration: none;}
+a:hover{text-decoration: none !important;}
 img{border: none;margin: 0px;padding: 0px;}
 ul,ol,p{
     margin: 0px;
 }
 
 
-/*有半部分样式*/
+/*右半部分样式*/
 .index_right{
-    height: 500px;
+    height: 100%;
     min-width: 720px;
     margin-left: 261px;
     margin-right: 20px;
     margin-top: 0px;
-    min-height: 100%;
+    min-height: 665px;
     padding: 0;
     background-color: #dae6ef;
 }
@@ -159,10 +159,14 @@ ul,ol,p{
 }
 .right_content_content{
     width: 100%;
-    min-height: 1080px;
+    min-width: 1080px;
+    height: auto;
     float: left;
 }
-
+.content_table{
+    width: 100%;
+    float: left;
+}
 .right_content_content table{
     width: auto;
     min-width: 1080px;
@@ -180,6 +184,7 @@ ul,ol,p{
     border: 1px solid #dddddd;
     color: white;
     height:35px;
+    text-align: center;
 }
 .right_content_content tbody{
     width: auto;
@@ -202,12 +207,89 @@ ul,ol,p{
     white-space:nowrap;
     padding: 10px 5px;
 }
+.right_content_content img{
+    padding-top: 2px;
+    cursor: pointer;
+}
 
-
+.table_button{
+    width: 100%;
+    float: left;
+}
+.table_button a{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+.tableButton{
+    width: 364px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.goFirst,.goLast,.prePage,.nextPage{
+    border: 1px solid #bbbbbb;
+    background-color: #fafafa;
+    color: #777777;
+    border-radius: 2px;
+    float: left;
+}
+.goFirst,.goLast{
+    width: 44px;
+}
+.prePage,.nextPage{
+    width: 56px;
+}
+.prePage{
+    margin-left: 5px;
+}
+.nextPage{
+    margin-right: 5px;
+}
+.currentPage{
+    width: 45px;
+    float: left;
+    color: #5da5dd;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+.pages{
+    width: 44px;
+    height: 28px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #5da5dd;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 2px;
+    float: left;
+    color: #5da5dd;
+}
+.goPage{
+    width: 44px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: #5da5dd;
+    float: left;
+}
 /*公共类*/
 .hide{
     display: none;
 }
 .show{
     display: block;
+}
+
+.tdClick{
+    background-color: #eaf3f8;
+}
+.tdNoClick{
+    background-color: #ffffff;
 }

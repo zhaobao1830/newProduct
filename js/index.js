@@ -3,6 +3,8 @@
  */
 $(function(){
 
+   $(".head").css("min-width","1363px")
+   $(".register_bottom").css("min-width","1363px")
    /*给左边的Li添加click事件
     * 点击以后，先remove兄弟类的liClick，添加liNoClick
     * 点击的Li添加添加liNoClick，remove liClick
@@ -10,9 +12,9 @@ $(function(){
     * */
    $(".realTimeLi ul li").on("click",function(){
       $(this).siblings().removeClass("liClick").addClass("liNoClick")
-      $(this).siblings().find("img").attr("src","../images/left/left_5.png")
+      $(this).siblings().find("img").attr("src","../images/index_left/left_5.png")
       $(this).removeClass("liNoClick").addClass("liClick")
-      $(this).find("img").attr("src","../images/left/left_6.png")
+      $(this).find("img").attr("src","../images/index_left/left_6.png")
    })
 
    /*给contractOrder_title绑定click事件*/
@@ -21,16 +23,35 @@ $(function(){
       fc=$(this).attr("class").split(" ")[0]
       if($("."+fc+"_ul").hasClass("show")){
          $("."+fc).removeClass("ulClick").addClass("ulNoClick")
-         $("."+fc).find("img").attr("src","../images/left/"+fc+"_n.png")
+         $("."+fc).find("img").attr("src","../images/index_left/"+fc+"_n.png")
          $("."+fc+"_ul").removeClass("show").addClass("hide")
       }else{
          operRealTimeLi()
          $("."+fc).removeClass("ulNoClick").addClass("ulClick")
-         $("."+fc).find("img").attr("src","../images/left/"+fc+"_y.png")
+         $("."+fc).find("img").attr("src","../images/index_left/"+fc+"_y.png")
          $("."+fc+"_ul").removeClass("hide").addClass("show")
       }
    })
 
+   /*给body力的P添加click方法
+   * 如果有thead_p_noClick，代表现在是未选中，点击以后，移除thead_p_noClick，添加tbody_p_click
+   * 背景设置为eaf3f8
+   * 如果有tbody_p_click，代表现在是选中，点击以后，移除tbody_p_click，添加thead_p_noClick
+   * 背景设置为白色
+   * */
+    $(".tbody_p").on("click",function(){
+       if($(this).hasClass("tbody_p_noClick")){
+          $(this).removeClass("tbody_p_noClick").addClass("tbody_p_click")
+          $(this).find("img").attr("src","../images/index_right/yesSelect.png")
+          $(this).parent().parent().removeClass("tdNoClick").addClass("tdClick")
+       }else{
+          $(this).removeClass("tbody_p_click").addClass("tbody_p_noClick")
+          $(this).find("img").attr("src","../images/index_right/noSelect.png")
+          $(this).parent().parent().removeClass("tdClick").addClass("tdNoClick")
+       }
+    })
+
+   setIndexHeight()
 })
 
 
@@ -44,8 +65,63 @@ function operRealTimeLi(){
       if(divClass.hasClass("ulClick")){
          firstClass=$(".realTimeLi").eq(i).find("div").attr("class").split(" ")[0]
          divClass.removeClass("ulClick").addClass("ulNoClick")
-         divClass.find("img").attr("src","../images/left/"+firstClass+"_n.png")
+         divClass.find("img").attr("src","../images/index_left/"+firstClass+"_n.png")
          $("."+firstClass+"_ul").removeClass("show").addClass("hide")
       }
    }
+}
+
+
+/*表格头部点击
+* 判断有没有thead_p_click，有则去掉thead_p_click，添加thead_p_noClick,代表全不选  img src改为yesSelect.png
+* body里面的所有第一栏，设置为不选
+* 背景设置为白色
+* 没有则添加thead_p_click，去掉thead_p_noClick,代表全选 img src改为allNoSelect.png
+*body里面的所有第一栏，设置为选中
+* 背景设置为eaf3f8
+* */
+function thead_p(){
+   if($(".thead_p").hasClass("thead_p_click")){
+      $(".thead_p").removeClass("thead_p_click").addClass("thead_p_noClick")
+      $(".thead_p").find("img").attr("src","../images/index_right/allNoSelect.png")
+      $(".tbody_p").each(function(){
+         $(this).removeClass("tbody_p_click").addClass("tbody_p_noClick")
+         $(this).find("img").attr("src","../images/index_right/noSelect.png")
+         $(this).parent().parent().removeClass("tdClick").addClass("tdNoClick")
+      })
+   }else{
+      $(".thead_p").removeClass("thead_p_noClick").addClass("thead_p_click")
+      $(".thead_p").find("img").attr("src","../images/index_right/yesSelect.png")
+      $(".tbody_p").each(function(){
+         $(this).removeClass("tbody_p_noClick").addClass("tbody_p_click")
+         $(this).find("img").attr("src","../images/index_right/yesSelect.png")
+         $(this).parent().parent().removeClass("tdNoClick").addClass("tdClick")
+      })
+   }
+}
+
+
+/*获取页面的高度*/
+function setIndexHeight(){
+   var windowHeight
+   windowHeight=$(window).height() //浏览器可视高度
+   var rightConentContentHeight
+   //rightConentContentHeight =$(".right_content_content").height() //右边内容的高度
+   rightConentContentHeight =499
+   var minBodyHright
+   minBodyHright=rightConentContentHeight+354 //所需要页面的最小高度
+
+   var rightConentHeight //rightConent高度
+   var containHeight //内容高度
+   if(windowHeight<=minBodyHright){
+      rightConentHeight=rightConentContentHeight+110
+      containHeight=rightConentHeight+130
+   }else{
+      rightConentHeight=windowHeight-244
+      containHeight=rightConentHeight+104
+   }
+   $(".index_right_content").height(rightConentHeight)
+   $("#main-container").height(containHeight)
+   $(".sidebar").height(containHeight)
+   $(".index_right").height(containHeight)
 }

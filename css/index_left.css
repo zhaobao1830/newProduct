@@ -24,7 +24,11 @@ ul,ol,p{
     margin: 0px;
 }
 #main-container{
-    padding: 0px;
+    width: auto;
+    min-width: 1363px;
+    padding: 0;
+    background-color: #dae6ef;
+    position: relative;
 }
 .sidebar{
     width: 240px;
@@ -32,7 +36,8 @@ ul,ol,p{
     min-height: 600px;
     border-right: 1px solid #77afea;
     background-color: #eeeeee;
-    position: absolute;
+    /*position: absolute;*/
+    float: left;
 }
 
 #realTime{

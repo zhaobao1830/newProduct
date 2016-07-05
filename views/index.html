@@ -6,11 +6,12 @@
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
     <!--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="../js/head.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
+
     <!--<link rel="stylesheet" href="../css/bootstrap.min.css">-->
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/index_left.css">
     <link rel="stylesheet" href="../css/index_right.css">
+    <link rel="stylesheet" href="../css/foot.css">
 </head>
 <body>
     <div class="head">
@@ -39,7 +40,7 @@
               </div>
         </div>
     </div>
-    <div class="container-fluid" id="main-container">
+    <div  id="main-container">
         <!--左侧列表-->
        <div class="sidebar">
            <div id="realTime"><img src="../images/index_left/left_1.png"><p>实时报表</p></div>
@@ -163,41 +164,176 @@
                  </div>
              </div>
              <div class="right_content_content">
-               <table>
-                   <thead>
-                      <tr>
-                          <td width="54"><img src="../images/index_right/noSelect.png"></td>
-                          <td width="70">序号</td>
-                          <td>合同编号</td>
-                          <td>合同名称</td>
-                          <td>供应商</td>
-                          <td>采购单位</td>
-                          <td>签订时间</td>
-                          <td>合同状态</td>
-                          <td>审定状态</td>
-                          <td>创建时间</td>
-                          <td width="68">操作</td>
-                      </tr>
-                   </thead>
-                   <tbody>
-                      <tr>
-                          <td><img src="../images/index_right/yesSelect.png"></td>
-                          <td>1</td>
-                          <td>1ZZTLJ-2016-031</td>
-                          <td>直流传动机车采购合同</td>
-                          <td>中车大连机车车辆有限公司</td>
-                          <td>郑州铁路局</td>
-                          <td>2016-02-09</td>
-                          <td>审核通过</td>
-                          <td></td>
-                          <td>2016-05-25</td>
-                          <td>修改</td>
-                      </tr>
-                   </tbody>
-               </table>
+               <div class="content_table">
+                   <table>
+                       <thead>
+                       <tr>
+                           <td width="54"><p class="thead_p thead_p_noClick" onclick="thead_p()"><img src="../images/index_right/allNoSelect.png"></p></td>
+                           <td width="70">序号</td>
+                           <td>合同编号</td>
+                           <td>合同名称</td>
+                           <td>供应商</td>
+                           <td>采购单位</td>
+                           <td>签订时间</td>
+                           <td>合同状态</td>
+                           <td>审定状态</td>
+                           <td>创建时间</td>
+                           <td width="68">操作</td>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_click"><img src="../images/index_right/yesSelect.png"></p></td>
+                           <td>1</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td><a href="#">修改</a></td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>2</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>3</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>4</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>5</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>6</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>7</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>8</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>9</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       <tr>
+                           <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
+                           <td>10</td>
+                           <td>1ZZTLJ-2016-031</td>
+                           <td>直流传动机车采购合同</td>
+                           <td>中车大连机车车辆有限公司</td>
+                           <td>郑州铁路局</td>
+                           <td>2016-02-09</td>
+                           <td>审核通过</td>
+                           <td></td>
+                           <td>2016-05-25</td>
+                           <td>修改</td>
+                       </tr>
+                       </tbody>
+                   </table>
+               </div>
+               <div class="table_button">
+                  <div class="tableButton">
+                      <a class="goFirst">首页</a>
+                      <a class="prePage">上一页</a>
+                      <p class="currentPage">3</p>
+                      <a class="nextPage">下一页</a>
+                      <a class="goLast">尾页</a>
+                      <input type="text" value="" class="pages">
+                      <a class="goPage">跳转</a>
+                  </div>
+               </div>
              </div>
           </div>
        </div>
     </div>
+    <div class="register_bottom">
+        铁路产品质量管理系统
+    </div>
+
+    <script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>
