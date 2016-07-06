@@ -51,7 +51,11 @@ img{border: none;margin: 0px;padding: 0px;}
     cursor: pointer;
     background-image: url("../images/head/head_2.png");
 }
-
+.head_choice a{
+    width: 72px;
+    height: 72px;
+    display: block;
+}
 .head_users{
     width: 366px;
     height: 30px;

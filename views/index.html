@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>一级页面</title>
     <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-    <!--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="../js/head.js"></script>
-
-    <!--<link rel="stylesheet" href="../css/bootstrap.min.css">-->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-switch.min.js"></script>
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/index_left.css">
     <link rel="stylesheet" href="../css/index_right.css">
+    <link rel="stylesheet" href="../css/newOrderInformation.css">
     <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/bootstrap-switch.min.css">
 </head>
 <body>
     <div class="head">
@@ -21,9 +22,9 @@
         <div class="head_choice">
             <ul>
                 <li class="head_homePage"></li>
-                <li class="head_inforMana"></li>
+                <li class="head_inforMana"><a href="../views/index.html"></a></li>
                 <li class="head_pageMana"></li>
-                <li class="head_userMana"></li>
+                <li class="head_userMana"><a href="../views/inforPer.html"></a></li>
                 <li class="head_systeMana"></li>
             </ul>
         </div>
@@ -57,7 +58,7 @@
                <li class="realTimeLi realTimeLiTit">
                    <div class="cm ulNoClick realTimeDiv"><img src="../images/index_left/cm_n.png">编码管理</div>
                    <ul  class="cm_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">序列号生成</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">序列号生成</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">序列号打印</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">序列号查询</li>
                    </ul>
@@ -65,14 +66,14 @@
                <li class="realTimeLi realTimeLiTit">
                    <div class="sm ulNoClick realTimeDiv"><img src="../images/index_left/sm_n.png">供货计划管理</div>
                    <ul  class="sm_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">发货单维护</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">发货单维护</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">发货单查询</li>
                    </ul>
                </li>
                <li class="realTimeLi realTimeLiTit">
                    <div class="is ulNoClick realTimeDiv"><img src="../images/index_left/is_n.png">信息查询</div>
                    <ul  class="is_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">产品查询</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">产品查询</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">标准查询</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">资质查询</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">市场价格查询</li>
@@ -82,7 +83,7 @@
                <li class="realTimeLi realTimeLiTit">
                    <div class="bis ulNoClick realTimeDiv"><img src="../images/index_left/bis_n.png">基础信息管理</div>
                    <ul  class="bis_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">供应商管理</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">供应商管理</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">生产厂商管理</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">物资档案管理</li>
                    </ul>
@@ -90,14 +91,14 @@
                <li class="realTimeLi realTimeLiTit">
                    <div class="qsi ulNoClick realTimeDiv"><img src="../images/index_left/qsi_n.png">质量抽查监督信息</div>
                    <ul  class="qsi_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">质量监督信息维护</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">质量监督信息维护</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">质量监督信息查询</li>
                    </ul>
                </li>
-               <li class="realTimeLi realTimeLiTit">
+               <li class="realTimeLi realTimeLiTit" id="liBottom">
                    <div class="sym ulNoClick realTimeDiv"><img src="../images/index_left/sym_n.png">系统管理</div>
                    <ul  class="sym_ul hide">
-                       <li class="liClick"><img src="../images/index_left/left_6.png">组织管理</li>
+                       <li class="liNoClick"><img src="../images/index_left/left_5.png">组织管理</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">系统用户</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">用户审核</li>
                        <li class="liNoClick"><img src="../images/index_left/left_5.png">企业审核</li>
@@ -112,7 +113,7 @@
               <p>当前位置：</p>
               <p class="title_head">信息管理</p>
               <p>></p>
-              <p class="title_Li">合同订单管理</p>
+              <p class="title_ul">合同订单管理</p>
               <p>></p>
               <p class="title_li">合同信息维护</p>
           </div>
@@ -120,7 +121,7 @@
              <div class="right_content_top">
                  <div class="rct_left">
                      <div>
-                         <a href="#">
+                         <a href="#" onclick="addNoi()">
                              <img src="../images/index_right/add.png">
                              <p>添加</p>
                          </a>
@@ -176,7 +177,7 @@
                            <td>采购单位</td>
                            <td>签订时间</td>
                            <td>合同状态</td>
-                           <td>审定状态</td>
+                           <td width="100">审定状态</td>
                            <td>创建时间</td>
                            <td width="68">操作</td>
                        </tr>
@@ -191,7 +192,7 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
                            <td><a href="#">修改</a></td>
                        </tr>
@@ -204,9 +205,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -217,9 +218,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -230,9 +231,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -243,9 +244,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -256,9 +257,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -269,9 +270,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -282,9 +283,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -295,9 +296,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        <tr>
                            <td><p class="tbody_p tbody_p_noClick"><img src="../images/index_right/noSelect.png"></p></td>
@@ -308,9 +309,9 @@
                            <td>郑州铁路局</td>
                            <td>2016-02-09</td>
                            <td>审核通过</td>
-                           <td></td>
+                           <td><input class="switch-size" type="checkbox" checked data-size="mini"></td>
                            <td>2016-05-25</td>
-                           <td>修改</td>
+                           <td><a href="#">修改</a></td>
                        </tr>
                        </tbody>
                    </table>
@@ -333,7 +334,100 @@
     <div class="register_bottom">
         铁路产品质量管理系统
     </div>
+    <div class="nor_body hide">
+        <div class="nor">
+            <div class="nor_title">
+                <p>新增订单信息</p>
+                <a href="javascript:;" onclick="nor_close()"><img src="../images/newOrderInformation/colse.png"></a>
+            </div>
+            <form>
+                <div class="nor_content">
+                    <div class="contentDiv">
+                        <label>订单号：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="contentDiv">
+                        <label>合同编号：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>合同名称：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>物资编号：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>物资名称：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>规格型号：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>计量单位：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>产地：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>材质：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>产品标识代码：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>使用寿命：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>编码方式：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>编码：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>单价：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>总数量：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>生产厂家编号：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>生产厂家名称：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>发货地址：</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
+                        <label>收货地址：</label>
+                        <input type="text" value="">
+                    </div>
+                </div>
+                <div class="formButton">
+                    <a class="saveForm" href="javascript:;" onclick="saveNoiForm()">保存</a>
+                    <a class="resetForm" href="javascript:;" onclick="resetNoiForm()">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/newOrderInformation.js"></script>
 </body>
 </html>

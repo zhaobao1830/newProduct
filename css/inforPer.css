@@ -62,7 +62,9 @@ img{border: none;margin: 0px;padding: 0px;}
     line-height: 46px;
     border-bottom: 1px solid #eeeeee;
 }
-
+#liBottom{
+    border-bottom: 1px solid #dddddd;
+}
 .realTimeDiv{
     font-size: 16px;
     background-position: 200px 10px;
@@ -71,7 +73,10 @@ img{border: none;margin: 0px;padding: 0px;}
     padding-left: 20px;
 }
 .realTimeLi img{
+    display: block;
     padding-right: 10px;
+    float: left;
+    margin-top: 14px;
 }
 
 /*×ó±ßul titleµÄÁ©¸öcss*/

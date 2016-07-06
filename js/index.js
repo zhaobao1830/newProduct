@@ -2,6 +2,10 @@
  * Created by Administrator on 2016/6/30.
  */
 $(function(){
+   //设置头部样式
+   $(".head_inforMana").css("background-position","-82px -82px")
+   $(".head_inforMana").addClass("clickLi")
+
 
    $(".head").css("min-width","1363px")
    $(".register_bottom").css("min-width","1363px")
@@ -10,11 +14,17 @@ $(function(){
     * 点击的Li添加添加liNoClick，remove liClick
     * 修改img的src值
     * */
+   var ulText  //当前点击的ul的text,用来给title_ul赋值
+   var liText //当前点击的li的text,用来给title_li赋值
    $(".realTimeLi ul li").on("click",function(){
       $(this).siblings().removeClass("liClick").addClass("liNoClick")
       $(this).siblings().find("img").attr("src","../images/index_left/left_5.png")
       $(this).removeClass("liNoClick").addClass("liClick")
       $(this).find("img").attr("src","../images/index_left/left_6.png")
+      ulText=$(".ulClick").text()
+      $(".title_ul").text(ulText)
+      liText=$(this).text()
+      $(".title_li").text(liText)
    })
 
    /*给contractOrder_title绑定click事件*/
@@ -52,6 +62,11 @@ $(function(){
     })
 
    setIndexHeight()
+
+   //初始化bootstrap开关控件
+   $("input[type=\"checkbox\"], input[type=\"radio\"]").not("[data-switch-no-init]").bootstrapSwitch({'onColor':"info",'size':"mini",'handleWidth':"28px","labelWidth":"30px"});
+  $(".bootstrap-switch").css("border-radius","4px")
+
 })
 
 
@@ -91,7 +106,7 @@ function thead_p(){
       })
    }else{
       $(".thead_p").removeClass("thead_p_noClick").addClass("thead_p_click")
-      $(".thead_p").find("img").attr("src","../images/index_right/yesSelect.png")
+      $(".thead_p").find("img").attr("src","../images/index_right/allYesSelect.png")
       $(".tbody_p").each(function(){
          $(this).removeClass("tbody_p_noClick").addClass("tbody_p_click")
          $(this).find("img").attr("src","../images/index_right/yesSelect.png")
@@ -115,13 +130,31 @@ function setIndexHeight(){
    var containHeight //内容高度
    if(windowHeight<=minBodyHright){
       rightConentHeight=rightConentContentHeight+110
-      containHeight=rightConentHeight+130
+      containHeight=rightConentHeight+110
    }else{
       rightConentHeight=windowHeight-244
-      containHeight=rightConentHeight+104
+      containHeight=rightConentHeight+84
    }
    $(".index_right_content").height(rightConentHeight)
    $("#main-container").height(containHeight)
    $(".sidebar").height(containHeight)
    $(".index_right").height(containHeight)
+}
+
+/*添加新增订单信息*/
+function addNoi(){
+   $(".nor_body").removeClass("hide").addClass("show")
+
+   var windowHeight=$(document).height() //浏览器可视高度
+   var norHeight=$(".nor").height() //nor高度
+   var necTop //nci距离头部的距离
+   if(norHeight<=windowHeight){
+      $(".nor_body").height(windowHeight)  //设置nor_body的高度
+      necTop=(windowHeight-norHeight)/2
+      $(".nor").css("margin-top",necTop)
+   }else{
+      $(".nor").css("margin-top","100px")
+   }
+
+
 }

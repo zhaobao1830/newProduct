@@ -5,11 +5,7 @@
     font-size: 12px;
     font-family:'Microsoft Yahei','Arial',Tahoma,'Simsun';
 }
-html,body{
-    height:99%;
-    margin:0px;
-    background-color: #dae6ef;
-}
+
 em{
     font-style: normal;
 }
@@ -24,10 +20,18 @@ ul,ol,p{
     margin: 0px;
 }
 
+.nor_body{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
 .nor{
     width: 840px;
     height: 668px;
-    margin: 100px auto;
+    margin: 0px auto;
     background-color: white;
 }
 

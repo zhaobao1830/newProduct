@@ -7,41 +7,56 @@
     <script type="text/javascript" src="../js/newContractInformarion.js"></script>
     <script type="text/javascript" src="../js/WdatePicker.js"></script>
     <link rel="stylesheet" href="../css/newContractInformarion.css">
+
 </head>
 <body>
-    <div class="nci">
-        <div class="nci_title">
-            <p>新增合同信息维护</p>
-            <a href="javascript:;" onclick="nci_close()"><img src="../images/newContractInformarion/close.png"></a>
-        </div>
-        <form>
-        <div class="nci_content">
-            <div class="contentDiv">
-                <label>合同编号：</label>
-                <input type="text" value="">
-            </div>
-            <div>
-                <label>合同名称：</label>
-                <input type="text" value="">
-            </div>
-            <div>
-                <label>供应商名称：</label>
-                <input type="text" value="">
-            </div>
-            <div>
-                <label>采购单位：</label>
-                <input type="text" value="">
-            </div>
-            <div>
-                <label>合同签订日期：</label>
-                <input  name="signDate"  type="text" onFocus="var endDate=$dp.$('endDate2');WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" value=""  />
-            </div>
-        </div>
-        <div class="formButton">
-            <a class="saveForm" href="#">保存</a>
-            <a class="resetForm" href="#">取消</a>
-        </div>
-        </form>
+    <div class="nci_body">
+           <div class="nci">
+               <div class="nci_title">
+                   <p>新增合同信息维护</p>
+                   <a href="javascript:;" onclick="nci_close()"><img src="../images/newContractInformarion/close.png"></a>
+               </div>
+               <form>
+                   <div class="nci_content">
+                       <div class="contentDiv">
+                           <label>合同编号：</label>
+                           <input type="text" value="">
+                       </div>
+                       <div>
+                           <label>合同名称：</label>
+                           <input type="text" value="">
+                       </div>
+                       <div>
+                           <label>供应商名称：</label>
+                           <input type="text" value="">
+                       </div>
+                       <div>
+                           <label>采购单位：</label>
+                           <input type="text" value="">
+                       </div>
+                       <div>
+                           <label>合同签订日期：</label>
+                           <input  name="signDate"  type="text" onFocus="var endDate=$dp.$('endDate2');WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" value=""  />
+                       </div>
+                   </div>
+                   <div class="formButton">
+                       <a class="saveForm" href="javascript:;" onclick="saveNciForm()">保存</a>
+                       <a class="resetForm" href="javascript:;" onclick="resetNciForm()">取消</a>
+                   </div>
+               </form>
+           </div>
     </div>
+    <script>
+        var windowHeight=$(document).height() //浏览器可视高度
+        var nciHeight=$(".nci").height() //nci高度
+        var necTop //nci距离头部的距离
+        if(nciHeight<=windowHeight){
+            $(".nci_body").height(windowHeight)  //设置nci_body的高度
+            necTop=(windowHeight-nciHeight)/2
+            $(".nci").css("margin-top",necTop)
+        }else{
+            $(".nci").css("margin-top","100px")
+        }
+    </script>
 </body>
 </html>

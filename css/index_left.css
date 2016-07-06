@@ -24,7 +24,7 @@ ul,ol,p{
     margin: 0px;
 }
 #main-container{
-    width: auto;
+    width: 100%;
     min-width: 1363px;
     padding: 0;
     background-color: #dae6ef;
@@ -68,7 +68,9 @@ ul,ol,p{
     line-height: 40px;
     border-bottom: 1px solid #eeeeee;
 }
-
+#liBottom{
+    border-bottom: 1px solid #dddddd;
+}
 .realTimeDiv{
     line-height: 46px;
     font-size: 16px;
@@ -82,10 +84,13 @@ ul,ol,p{
 }
 
 .realTimeLi img{
+    display: block;
     padding-right: 10px;
+    float: left;
+    margin-top: 14px;
 }
 .realTimeLi ul{
-   border-top: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
     background-color: white;
 }
 .realTimeLi ul li{
@@ -95,7 +100,7 @@ ul,ol,p{
     cursor: pointer;
 }
 .realTimeLi ul li img{
-    margin-top: -2px;
+    margin-top: 15px;
 }
 /*×ó±ßul titleµÄÁ©¸öcss*/
 .ulClick{

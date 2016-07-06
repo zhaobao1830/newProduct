@@ -6,8 +6,7 @@ $(function(){
     //如果有，则改变它的background-position值
     //修改点击的当前li的background-position值，并且添加clickLi
 
-    $(".head_inforMana").css("background-position","-82px -82px")
-    $(".head_inforMana").addClass("clickLi")
+
 
     var oldPostionLeft //点击以前的background-position left值
     var clickLiPostion  //上一个点击的background-position值

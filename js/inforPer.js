@@ -5,7 +5,7 @@
 
 $(function(){
     //—› æ π”√
-    $(".head_userMana").css("background-position","-328px -82px")
+    $(".head_userMana").css("background-position","-246px -82px")
     $(".head_userMana").addClass("clickLi")
 
     setHeight("ei_inf")
