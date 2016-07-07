@@ -2,23 +2,11 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/css/bootstrap-switch.min.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css/bootstrap3" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css/default.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css/docs.min.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css/highlight.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/login.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css/main.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/register.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/docs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/docs/js/bootstrap-switch.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/images/index_right/allYesSelect.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/bootstrap-switch.min.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/head.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/highlight.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/inforPerRight.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/main.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/index1.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/test.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/views/test1.html" charset="UTF-8" />
   </component>
 </project>

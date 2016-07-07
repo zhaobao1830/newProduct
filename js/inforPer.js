@@ -45,7 +45,7 @@ $(function(){
 /*获取页面的高度*/
 function setHeight(str){
     var windowHeight
-    windowHeight=$(window).height() //浏览器可视高度
+    windowHeight=$(document).height() //浏览器可视高度
     var informationHeight
     informationHeight =$("."+str).height() //右边内容的高度
     var minBodyHright
@@ -57,9 +57,8 @@ function setHeight(str){
         iprHeight=informationHeight+80
         containHeight=informationHeight+194
     }else{
-        informationHeight=windowHeight-285
-        iprHeight=informationHeight+40
-        containHeight=informationHeight+194
+        iprHeight=windowHeight-244
+        containHeight=windowHeight-130
     }
     $(".ipr").height(iprHeight)
     $(".inforPerContain").height(containHeight)

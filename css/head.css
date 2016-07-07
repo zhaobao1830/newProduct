@@ -81,6 +81,7 @@ img{border: none;margin: 0px;padding: 0px;}
     margin-left: 52px;
 }
 .login_username p{
+    width: 36px;
     margin-left: 10px;
 }
 .login_username span{
@@ -92,6 +93,9 @@ img{border: none;margin: 0px;padding: 0px;}
 .updatePassword{
     margin-left: 29px;
     cursor: pointer;
+}
+.updatePassword p,.loginOut p{
+    width: 48px;
 }
 .loginOut{
     margin-left: 39px;

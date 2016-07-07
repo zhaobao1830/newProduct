@@ -6,7 +6,6 @@ $(function(){
    $(".head_inforMana").css("background-position","-82px -82px")
    $(".head_inforMana").addClass("clickLi")
 
-
    $(".head").css("min-width","1363px")
    $(".register_bottom").css("min-width","1363px")
    /*给左边的Li添加click事件
@@ -118,22 +117,22 @@ function thead_p(){
 
 /*获取页面的高度*/
 function setIndexHeight(){
-   var windowHeight
-   windowHeight=$(window).height() //浏览器可视高度
+   var documentHeight
+   documentHeight=$(document).height() //浏览器可视高度
    var rightConentContentHeight
-   //rightConentContentHeight =$(".right_content_content").height() //右边内容的高度
-   rightConentContentHeight =499
+   rightConentContentHeight =$(".right_content_content").height() //右边内容的高度
+   //rightConentContentHeight =519
    var minBodyHright
    minBodyHright=rightConentContentHeight+354 //所需要页面的最小高度
 
    var rightConentHeight //rightConent高度
    var containHeight //内容高度
-   if(windowHeight<=minBodyHright){
+   if(documentHeight<=minBodyHright){
       rightConentHeight=rightConentContentHeight+110
-      containHeight=rightConentHeight+110
+      containHeight=rightConentHeight+114
    }else{
-      rightConentHeight=windowHeight-244
-      containHeight=rightConentHeight+84
+      rightConentHeight=documentHeight-244
+      containHeight=documentHeight-130
    }
    $(".index_right_content").height(rightConentHeight)
    $("#main-container").height(containHeight)
@@ -145,12 +144,12 @@ function setIndexHeight(){
 function addNoi(){
    $(".nor_body").removeClass("hide").addClass("show")
 
-   var windowHeight=$(document).height() //浏览器可视高度
+   var documentHeight=$(document).height() //浏览器可视高度
    var norHeight=$(".nor").height() //nor高度
    var necTop //nci距离头部的距离
-   if(norHeight<=windowHeight){
-      $(".nor_body").height(windowHeight)  //设置nor_body的高度
-      necTop=(windowHeight-norHeight)/2
+   if(norHeight<=documentHeight){
+      $(".nor_body").height(documentHeight)  //设置nor_body的高度
+      necTop=(documentHeight-norHeight)/2
       $(".nor").css("margin-top",necTop)
    }else{
       $(".nor").css("margin-top","100px")
